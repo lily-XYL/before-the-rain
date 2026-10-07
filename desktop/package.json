@@ -1,0 +1,33 @@
+{
+  "name": "before-the-rain-desktop",
+  "version": "1.0.0",
+  "description": "雨停之前 · 完整版视觉小说",
+  "author": "Before The Rain",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "stage": "node ../scripts/stage_desktop.cjs",
+    "start": "electron .",
+    "build": "npm run stage && electron-builder --win portable --x64",
+    "unpacked": "npm run stage && electron-builder --win --x64 --dir"
+  },
+  "devDependencies": {
+    "electron": "44.6.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "local.beforetherain.game",
+    "productName": "雨停之前",
+    "asar": true,
+    "compression": "normal",
+    "electronDownload": {
+      "mirror": "https://npmmirror.com/mirrors/electron/",
+      "customDir": "44.6.0",
+      "cache": "../.build-cache/electron"
+    },
+    "directories": { "output": "../release/desktop-build" },
+    "files": ["main.cjs", "preload.cjs", "game/**/*", "package.json"],
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }], "signAndEditExecutable": false },
+    "portable": { "artifactName": "雨停之前_v${version}.exe", "requestExecutionLevel": "user" }
+  }
+}

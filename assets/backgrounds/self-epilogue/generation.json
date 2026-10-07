@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-06",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Create a new 16:9 landscape anime visual novel background, high resolution. Use the supplied image ONLY as a style reference for painterly anime linework, muted teal and cream palette, warm wood, gentle daylight, delicate environmental detail; design an entirely different room and layout. This is Shen Zhixia's new modest rented room, a 22-year-old woman starting her first editorial job in a Chinese riverside city. Quiet late afternoon, small wooden single-person writing desk at a wide open window on the LEFT, view of ordinary leafy apartment roofs, a compact single bed on the RIGHT with a plain pale teal cover, two partly unpacked cardboard boxes near the back wall, short bookshelf with assorted unlabelled books, a tiny potted plant and ONE mug on the desk. On the desk an open sheet of blank letter paper and pen, no readable marks. Fresh curtains, light rain has cleared, sun gently illuminates paper. Lived-in but modest, spacious composition for two standing character sprites in the foreground and dialogue overlay bottom quarter, clear floor, strongest detail in upper two thirds. Mood of adult independence, hopeful ordinary life, no romance staging. No people, no character silhouettes, no text, no letters, no logos, no watermark, no UI, no inset frames. Flat opaque full scene background, not transparent. Do not reproduce the reference apartment furniture placement.",
+  "styleReference": "assets/backgrounds/chapter-eight-ye/ye_home_morning.png",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-c2ff5dee-d794-494c-94a9-171e7b4e88f2.png",
+  "output": "assets/backgrounds/self-epilogue/self_home.png"
+}

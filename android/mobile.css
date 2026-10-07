@@ -1,0 +1,101 @@
+:root { --rain-height: 100dvh; --mobile-header: 64px; }
+html, body { width: 100%; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; }
+body { font-family: "Noto Sans CJK SC", "Noto Sans SC", sans-serif; }
+button, input, select { touch-action: manipulation; }
+#app { min-height: var(--rain-height); }
+.topbar { height: var(--mobile-header); padding: 0 12px; gap: 8px; }
+.brand { font-size: 15px; letter-spacing: 1px; gap: 6px; }
+.brand-symbol { font-size: 24px; }
+.brand-sub { display: none; }
+.topbar nav { gap: 4px; }
+.topbar nav button { min-height: 44px; min-width: 44px; padding: 6px 4px; font-size: 11px; letter-spacing: 0; }
+.settings-nav span { display: none; }
+.title-screen { min-height: calc(var(--rain-height) - var(--mobile-header)); padding: 28px 7% 132px; }
+h1 { font-size: clamp(58px, 19vw, 90px); letter-spacing: 8px; }
+h1 > span { padding-left: 30px; }
+.eyebrow { font-size: 10px; letter-spacing: 2px; margin-bottom: 20px; }
+.english-title { font-size: 9px; letter-spacing: 3px; margin: 16px 0 20px; }
+.intro { font-size: 14px; line-height: 2; letter-spacing: 1px; }
+.title-actions { gap: 10px; margin-top: 22px; }
+.primary, .secondary { min-height: 48px; padding: 0 16px; gap: 20px; font-size: 13px; letter-spacing: 1px; }
+.load-link { min-height: 44px; margin-top: 8px; padding: 10px 0; font-size: 12px; }
+.vertical-note { display: none; }
+.cover-caption { left: 7%; right: auto; bottom: 70px; padding-left: 12px; gap: 12px; }
+.cover-caption > div > span { font-size: 13px; letter-spacing: 1px; }
+.cover-caption small { font-size: 10px; letter-spacing: 0; }
+.title-footer { left: 7%; right: 7%; bottom: 18px; padding-top: 14px; font-size: 9px; letter-spacing: 1px; }
+.title-footer > span:first-child { display: none; }
+.game-screen, .game-screen.many-choices { height: calc(var(--rain-height) - var(--mobile-header)); min-height: 0; padding: 10px 12px 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 8px; }
+.scene-top { grid-row: 1; gap: 8px; min-width: 0; }
+.scene-top > div { display: block; max-width: 75%; min-width: 0; padding: 6px 8px !important; }
+.scene-top > div > span { font-size: 13px; letter-spacing: 1px; }
+.scene-top small { border: 0; padding: 4px 0 0; font-size: 10px; letter-spacing: 0; line-height: 1.6; }
+.scene-top button { min-height: 44px; padding: 6px 8px; font-size: 10px; letter-spacing: 0; }
+.game-screen .chapter-stamp, .game-screen.many-choices .chapter-stamp { display: none; }
+.character-stage { position: absolute; inset: 76px -20% 155px; height: auto; gap: 0; opacity: 1; }
+.sprite { height: 100%; width: 50%; max-height: none; max-width: 360px; }
+.game-screen .choice-box, .game-screen.many-choices .choice-box { grid-row: 2; position: relative; inset: auto; transform: none; width: 100%; margin: 0; align-self: center; max-height: 100%; overflow: auto; overscroll-behavior: contain; padding: 4px 0; }
+.choice-box > p { font-size: 12px; line-height: 1.6; letter-spacing: 1px; margin: 6px 0 10px; }
+.choice-box > div { gap: 8px; }
+.choice-box button { min-height: 48px; padding: 13px 12px; font-size: 14px; line-height: 1.65; letter-spacing: .3px; }
+.choice-box button:hover { transform: none; }
+.choice-box button span { margin-right: 10px; }
+.game-screen .dialogue-box, .game-screen.many-choices .dialogue-box { grid-row: 3; padding: 10px 14px 0; margin: 0; min-height: 0; min-width: 0; }
+.dialogue-meta > #speaker { font-size: 18px; letter-spacing: 2px; }
+.dialogue-flower { font-size: 20px; }
+.dialogue-text { font-size: 16px; line-height: 1.8; letter-spacing: .5px; padding: 10px 20px 10px 0; min-height: 90px; max-height: min(24vh, 190px); overflow: auto; overscroll-behavior: contain; }
+#next-indicator { bottom: 12px; }
+.dialogue-toolbar { min-height: 48px; justify-content: stretch; }
+.controls-hint, #quick-save-button, #quick-load-button { display: none; }
+.dialogue-toolbar > div { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: 100%; gap: 2px; }
+.dialogue-toolbar button { min-height: 44px; font-size: 12px; padding: 10px 0; letter-spacing: 0; }
+dialog { width: min(640px, calc(100vw - 24px)); max-height: calc(var(--rain-height) - 24px); padding: 18px; overscroll-behavior: contain; }
+.panel-heading { margin-bottom: 16px; padding-bottom: 12px; gap: 8px; }
+.panel-heading > button { min-width: 44px; min-height: 44px; }
+.panel-heading h2 { font-size: 23px; letter-spacing: 2px; }
+.setting-row { gap: 10px; }
+.setting-row small { font-size: 11px; }
+.setting-row button, .setting-row select { min-height: 44px; font-size: 13px; padding: 8px 12px; }
+.setting-row input { min-height: 44px; max-width: 120px; }
+.backup-actions { max-width: 155px; gap: 6px; }
+.backup-actions button { white-space: nowrap; padding: 8px 10px; }
+.panel-note, .slot small, .gallery-card p { font-size: 12px; }
+.cast-card { gap: 12px; }
+.cast-card img { width: 76px; height: 155px; }
+.cast-card p { font-size: 13px; }
+.menu-buttons button, .confirm-actions button { min-height: 48px; }
+.ending-screen { min-height: calc(var(--rain-height) - var(--mobile-header)); padding: 28px 7% 32px; }
+.ending-screen h2 { font-size: 30px; letter-spacing: 2px; }
+.ending-screen #ending-description, .ending-quote { font-size: 15px; }
+.ending-flower { font-size: 48px; }
+.ending-actions { gap: 10px; }
+.ending-screen > small { display: block; line-height: 1.8; font-size: 11px; }
+.toast { bottom: 18px; max-width: calc(100vw - 24px); width: max-content; padding: 12px 16px; font-size: 13px; letter-spacing: 0; }
+@media (max-width: 340px) { .topbar { padding: 0 8px; gap: 4px; } .brand { font-size: 14px; } .topbar nav { gap: 0; } .topbar nav button { font-size: 10px; } .backup-actions { max-width: 85px; } }
+@media (orientation: landscape) and (max-height: 560px) {
+  :root { --mobile-header: 52px; }
+  .title-screen { padding: 16px 6% 65px; }
+  .title-copy { width: 68%; }
+  h1 { font-size: 62px; line-height: 1.2; }
+  h1 > span { display: inline; padding-left: 10px; }
+  .eyebrow { margin-bottom: 10px; }
+  .english-title { margin: 10px 0; }
+  .intro { margin: 8px 0; font-size: 12px; }
+  .title-actions { margin-top: 12px; }
+  .load-link { margin-top: 0; }
+  .cover-caption { display: none; }
+  .title-footer { bottom: 12px; padding-top: 10px; }
+  .game-screen, .game-screen.many-choices { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); padding: 6px 12px 8px; gap: 6px 12px; }
+  .scene-top { grid-column: 1 / -1; }
+  .scene-top > div { display: flex; align-items: center; gap: 12px; }
+  .scene-top small { padding: 0; }
+  .scene-top button { min-height: 36px; }
+  .character-stage { inset: 48px 49% 0 -2%; }
+  .sprite { width: 50%; max-height: 360px; }
+  .game-screen .choice-box, .game-screen.many-choices .choice-box { grid-column: 1; grid-row: 2; align-self: stretch; }
+  .game-screen .dialogue-box, .game-screen.many-choices .dialogue-box { grid-column: 2; grid-row: 2; align-self: stretch; display: flex; flex-direction: column; padding: 8px 12px 0; }
+  .dialogue-text { flex: 1; min-height: 0; max-height: none; font-size: 15px; }
+  .dialogue-toolbar { flex-shrink: 0; }
+  .ending-screen { padding-top: 16px; }
+  .ending-flower { display: none; }
+}

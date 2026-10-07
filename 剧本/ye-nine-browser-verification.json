@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-06",
+  "checks": [
+    "legacyYe8Continuation",
+    "manualBookmarkRestore",
+    "supportingCharacterNameAndPortrait",
+    "newRepairRecordingActualTiming",
+    "misuseDisclosureRemovalRemainSeparateFacts",
+    "noCameraPrivateMeetingAndActualTouch",
+    "actualMaintenanceDeletionOriginalWorkDeliveryAndInquiryOnly",
+    "restDoesNotReduceRelationshipAndCancellationNeedsAgreement",
+    "allThreeStageMemoriesAnd70Cards"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "documentHeight": 900,
+      "choiceBottom": 580,
+      "dialogueTop": 666,
+      "buttonHeights": [
+        58,
+        78,
+        78
+      ],
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "documentHeight": 844,
+      "choiceBottom": 524.265625,
+      "dialogueTop": 588,
+      "buttonHeights": [
+        74,
+        74,
+        74
+      ],
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    },
+    {
+      "width": 320,
+      "height": 668,
+      "documentWidth": 320,
+      "documentHeight": 789,
+      "choiceBottom": 497.1875,
+      "dialogueTop": 533.1875,
+      "buttonHeights": [
+        74,
+        74,
+        74
+      ],
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "documentHeight": 778,
+      "choiceBottom": 508.1875,
+      "dialogueTop": 544.1875,
+      "buttonHeights": [
+        58,
+        78,
+        78
+      ],
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    }
+  ],
+  "assets": {
+    "count": 31,
+    "failed": []
+  },
+  "errors": [],
+  "screenshots": [
+    "ye-nine-choices-1440.png",
+    "ye-nine-choices-390.png",
+    "ye-nine-choices-320.png",
+    "ye-nine-choices-844.png",
+    "ye-nine-misuse.png",
+    "ye-nine-disclosure.png",
+    "ye-nine-removal.png",
+    "ye-nine-station-desktop.png",
+    "ye-nine-together-desktop.png",
+    "ye-nine-reopen-desktop.png",
+    "ye-nine-paused-desktop.png",
+    "ye-nine-gallery-mobile.png"
+  ]
+}

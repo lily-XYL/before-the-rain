@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-06",
+  "checks": [
+    "legacyYe7Continuation",
+    "manualBookmarkRestore",
+    "newHomeAndNoCameraSprite",
+    "breakfastActualTiming",
+    "pauseCannotBypassPrivateMeeting",
+    "newContactAfterActualRepair",
+    "allThreeStageMemoriesAnd67Cards"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "choiceBottom": 540,
+      "dialogueTop": 666,
+      "buttons": [
+        58,
+        58,
+        58
+      ],
+      "roleSmallText": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "choiceBottom": 524.265625,
+      "dialogueTop": 588,
+      "buttons": [
+        74,
+        74,
+        74
+      ],
+      "roleSmallText": false
+    },
+    {
+      "width": 320,
+      "height": 668,
+      "documentWidth": 320,
+      "choiceBottom": 497.1875,
+      "dialogueTop": 533.1875,
+      "buttons": [
+        74,
+        74,
+        74
+      ],
+      "roleSmallText": false
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "choiceBottom": 432,
+      "dialogueTop": 468,
+      "buttons": [
+        58,
+        58,
+        58
+      ],
+      "roleSmallText": false
+    }
+  ],
+  "assets": {
+    "count": 31,
+    "failed": [],
+    "home": {
+      "url": "assets/backgrounds/chapter-eight-ye/ye_home.png",
+      "ok": true,
+      "width": 1672,
+      "height": 941
+    },
+    "morning": {
+      "url": "assets/backgrounds/chapter-eight-ye/ye_home_morning.png",
+      "ok": true,
+      "width": 1672,
+      "height": 941
+    }
+  },
+  "errors": [],
+  "screenshots": [
+    "ye-eight-choices-1440.png",
+    "ye-eight-choices-390.png",
+    "ye-eight-choices-320.png",
+    "ye-eight-choices-844.png",
+    "ye-eight-home-desktop.png",
+    "ye-eight-breakfast-desktop.png",
+    "ye-eight-work-desktop.png",
+    "ye-eight-together-desktop.png",
+    "ye-eight-slow-desktop.png",
+    "ye-eight-paused-desktop.png",
+    "ye-eight-repaired-desktop.png",
+    "ye-eight-together-mobile.png",
+    "ye-eight-gallery-mobile.png",
+    "ye-eight-title-320.png"
+  ]
+}

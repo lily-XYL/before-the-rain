@@ -1,0 +1,342 @@
+{
+  "product": "雨停之前",
+  "version": "1.0.0",
+  "builtAt": "2026-10-06T16:20:46.501Z",
+  "verification": "passed",
+  "chapters": 23,
+  "finalEndings": 13,
+  "cards": 74,
+  "textCharacters": 297498,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 32001,
+      "sha256": "33957fb323e154c3c9fc9e823eb9a5c3db35742ccd6394ba3141dfbadb025f4b"
+    },
+    {
+      "path": "assets/backgrounds/chapter-eight-xu/studio_night.png",
+      "bytes": 2215109,
+      "sha256": "5da01faf22b68c5e958b71e34536a7a9094b96431e252d94fa8abedfcf9de70e"
+    },
+    {
+      "path": "assets/backgrounds/chapter-eight-ye/ye_home.png",
+      "bytes": 2166420,
+      "sha256": "4b1ce967e157914f94666849a737157e55fa12e9fadbad41d26e41dd274e8a47"
+    },
+    {
+      "path": "assets/backgrounds/chapter-eight-ye/ye_home_morning.png",
+      "bytes": 2341349,
+      "sha256": "80f7de301ca14cf14b5eebf377ff8528dfc215359378163dcff1faeb6d999374"
+    },
+    {
+      "path": "assets/backgrounds/chapter-eight/lin_home.png",
+      "bytes": 2490607,
+      "sha256": "42a016e605a9062f6807cbfd99da726e863d813bd9dcfb1cd07a07b0716c300d"
+    },
+    {
+      "path": "assets/backgrounds/chapter-four/campus.png",
+      "bytes": 3146850,
+      "sha256": "d66fbe3c6f21225a391bee8a552153e30257a6415f8f9b2219bf91a2eb7c8f65"
+    },
+    {
+      "path": "assets/backgrounds/chapter-four/riverside.png",
+      "bytes": 2639028,
+      "sha256": "e97a714ba68b2c1ee0a0ed8bb31571a915aca18534fe87ca41f1ea76764163c7"
+    },
+    {
+      "path": "assets/backgrounds/chapter-four/venue.png",
+      "bytes": 2404643,
+      "sha256": "701f82ce256aa6555d01eb6c0904b7301a8daae97d81fbb738a990101d4dae4d"
+    },
+    {
+      "path": "assets/backgrounds/chapter-nine/rain_bookshop.png",
+      "bytes": 2689805,
+      "sha256": "58a8f8829be44aefa6f793f89aae260fcb291e6d6e39ebd7cb95a60af63e975e"
+    },
+    {
+      "path": "assets/backgrounds/chapter-nine/rain_stop.png",
+      "bytes": 3120645,
+      "sha256": "daf2ed0c0437f3d0234b1cabefb4dd81df638d87ab1f289550bc19a4f4253859"
+    },
+    {
+      "path": "assets/backgrounds/chapter-one/bookshop.png",
+      "bytes": 2750091,
+      "sha256": "b329949f1bbc7ffa9e61592d26c92d31d64ea5ca63f9969f0224036784d00ec3"
+    },
+    {
+      "path": "assets/backgrounds/chapter-one/dorm.png",
+      "bytes": 2441804,
+      "sha256": "a3164207553c1cecd3f922ffa82a0cfcd129ab72853fa52da775e9c19fc40a9e"
+    },
+    {
+      "path": "assets/backgrounds/chapter-one/old_street.png",
+      "bytes": 3267319,
+      "sha256": "dc69d4d871a82e8db00ec8534919711270e7b81746832c4d03fad5068411cccd"
+    },
+    {
+      "path": "assets/backgrounds/chapter-seven-xu/noodle_shop.png",
+      "bytes": 2431221,
+      "sha256": "b5cbe3a33bd0786f4e62625daa61830043b9b93aa9030feb95ae754e4dbac4b8"
+    },
+    {
+      "path": "assets/backgrounds/chapter-six/rooftop.png",
+      "bytes": 2751172,
+      "sha256": "15da6b724c19967a41ccaf2794ca03e808fbd32dcdcbaac96c3b02e6c5bc53cf"
+    },
+    {
+      "path": "assets/backgrounds/chapter-ten-xu/xu_home.png",
+      "bytes": 2424106,
+      "sha256": "a15df95dfded4e98d1f5bcc633a9fd63c4eab3b6076ef26bba15104ba3570519"
+    },
+    {
+      "path": "assets/backgrounds/chapter-ten-zhou/zhou_home.png",
+      "bytes": 2332906,
+      "sha256": "65114f716441ff07d6872786f9a0881a85f6b35c07ca65131ec39342834c728b"
+    },
+    {
+      "path": "assets/backgrounds/chapter-ten/autumn_riverside.png",
+      "bytes": 2825953,
+      "sha256": "72d19638c9cfc544850dd579b7d3a94033d9769b3cdaf85da2bf270dbdfc219a"
+    },
+    {
+      "path": "assets/backgrounds/chapter-ten/empty_bookshop.png",
+      "bytes": 2493281,
+      "sha256": "4a57900971e5cc22b9d3dd0462a18f20b9db15068d770970c2512c22b80bb0a7"
+    },
+    {
+      "path": "assets/backgrounds/chapter-ten/farewell_exhibit.png",
+      "bytes": 2732682,
+      "sha256": "283029396f5d8bf5e866ab74b7a3caf85bb703e7623ff4da6d3bb388a4e73ca9"
+    },
+    {
+      "path": "assets/backgrounds/chapter-ten/train_station.png",
+      "bytes": 2500678,
+      "sha256": "ff3319f0333acdf21dff7eeefda958cc19884c7c3e68abbfd254d8bd30ad0330"
+    },
+    {
+      "path": "assets/backgrounds/chapter-two/rehearsal.png",
+      "bytes": 2418467,
+      "sha256": "1571d59458d6802966584fa5ecb64a4f7295a234e903936d3cd6bd73ff25d57a"
+    },
+    {
+      "path": "assets/backgrounds/chapter-two/studio.png",
+      "bytes": 2509234,
+      "sha256": "8334f5d282136c1e59935c42d9471bc276e3117b9edc4699fc7532c2ea285a00"
+    },
+    {
+      "path": "assets/backgrounds/self-epilogue/self_home.png",
+      "bytes": 2341240,
+      "sha256": "883d982aeae468b25a588e42e46b2dfb1eda43aa5882b27b01e4ef687e349c81"
+    },
+    {
+      "path": "assets/characters/v1/cast.js",
+      "bytes": 2089,
+      "sha256": "91883392c89ea2471c8bc5258fc55625ca54625a21460c756e4111cfc47f2ad9"
+    },
+    {
+      "path": "assets/characters/v1/chen_xuning.png",
+      "bytes": 1486164,
+      "sha256": "cfcccbb02cce4600984c3d78dd4ad24a9fe2157de684b4fb2d1ea3a99bc7dce2"
+    },
+    {
+      "path": "assets/characters/v1/lin_lan.png",
+      "bytes": 1553632,
+      "sha256": "380f66584d7442abd3438bb4687c6a92bdc14df402f47052d74b64b5b5342c66"
+    },
+    {
+      "path": "assets/characters/v1/lin_wan.png",
+      "bytes": 1444194,
+      "sha256": "dbc24912c590a34426e6a1989ea6154de24f92961ca5dbf9cc04a5c645f1e18a"
+    },
+    {
+      "path": "assets/characters/v1/lu_yao.png",
+      "bytes": 1688658,
+      "sha256": "877c535dbfdf730de44fbff53109ef48c5840fdb8949fa6d88754962115ad72d"
+    },
+    {
+      "path": "assets/characters/v1/shen_zhixia.png",
+      "bytes": 2077661,
+      "sha256": "add8cd66ecba9eca787c9d6b93c0d8c9095954387e8fa19c22de26fa3e4aeeb8"
+    },
+    {
+      "path": "assets/characters/v1/xu_jianwei.png",
+      "bytes": 1388425,
+      "sha256": "de631aab7ed1e168e4b44e8d390bd878ec2651fd2879c94ea7338a2d64ff9f87"
+    },
+    {
+      "path": "assets/characters/v1/ye_cheng.png",
+      "bytes": 1511651,
+      "sha256": "1c2714d4c89cd250a1587e310f5312da8c190e789df3224d1f5515ffeeb069a0"
+    },
+    {
+      "path": "assets/characters/v1/ye_cheng_no_camera.png",
+      "bytes": 1433213,
+      "sha256": "51139201c768aa460983469e54aa227014878a5ed6222e8bc0ad209fea0bd983"
+    },
+    {
+      "path": "assets/characters/v1/zhou_zhi.png",
+      "bytes": 2082736,
+      "sha256": "588829dce908ed7fd688860fda9e9beea757de6e712f2bd3b947a4915ae411e9"
+    },
+    {
+      "path": "assets/cover.png",
+      "bytes": 2456565,
+      "sha256": "8ebcaeee3f0e33feb8fba51ed8cfde651ef3001906c7a98e26add406e8e7093d"
+    },
+    {
+      "path": "chapter-eight-lin.js",
+      "bytes": 46024,
+      "sha256": "115aca64e3ca766e829457c09c2c9b223995b8453d7a98bbf68ba4f0fdc0aa22"
+    },
+    {
+      "path": "chapter-eight-xu.js",
+      "bytes": 54024,
+      "sha256": "900521e4be3c97d8b7b8044edc18d8859fca81549b317f0ded55116db2ff34bb"
+    },
+    {
+      "path": "chapter-eight-ye.js",
+      "bytes": 76984,
+      "sha256": "446a196ad0e9956631d6345862076bb4448a61feaaedb8b0c92390e80fb1bbb3"
+    },
+    {
+      "path": "chapter-eight-zhou.js",
+      "bytes": 61841,
+      "sha256": "eeb4fe6c615dca7277040fbadee7fb949c8730c44ead8359c55c6275dd6cb3e8"
+    },
+    {
+      "path": "chapter-five.js",
+      "bytes": 62106,
+      "sha256": "d68ebbb4dace04aedf21e83e592acaf9436e7bfa9634d82708014bb61b74b24a"
+    },
+    {
+      "path": "chapter-four.js",
+      "bytes": 55260,
+      "sha256": "529776efc4ef5a60674f7fac6d3257cf48b7d26623ac26b90720cae2bc408402"
+    },
+    {
+      "path": "chapter-nine-lin.js",
+      "bytes": 48281,
+      "sha256": "bcfff5372b00c59088f42a3502ac68b9aebd05df0257b5d80abd79e90baa75ea"
+    },
+    {
+      "path": "chapter-nine-xu.js",
+      "bytes": 53327,
+      "sha256": "8d2119b56a07fce8a3b05970d00ccafc79ee29f547f862d20ebbc218daa595f1"
+    },
+    {
+      "path": "chapter-nine-ye.js",
+      "bytes": 49576,
+      "sha256": "ac10cec229511869e040cbaf015297ed6a0dfb01495e20caebd927f7b860a8e6"
+    },
+    {
+      "path": "chapter-nine-zhou.js",
+      "bytes": 49227,
+      "sha256": "d4a52e942e5d27e6ca87a4f9a963c0fb23b99d1432bf3cacb92a9e13acec0f9f"
+    },
+    {
+      "path": "chapter-one.js",
+      "bytes": 31042,
+      "sha256": "0941a26915c7a3c1c1a80fdecef0e20adb01ee3a9077c7aa6bbfb530e18d45df"
+    },
+    {
+      "path": "chapter-self-epilogue.js",
+      "bytes": 58065,
+      "sha256": "c9cfd1481983bfa32843c225f4aea77902f8483e978201ebfc5d05aafcf5be7c"
+    },
+    {
+      "path": "chapter-seven-lin.js",
+      "bytes": 45252,
+      "sha256": "fa957374586e67c042ea686750a7b2e1143e9a497be5235007eaba9ed4bd3d50"
+    },
+    {
+      "path": "chapter-seven-xu.js",
+      "bytes": 52036,
+      "sha256": "3daea9fdf0944d90d909f2bbacbfcf5a7f7c078814d03edfbbace501af6bbd33"
+    },
+    {
+      "path": "chapter-seven-ye.js",
+      "bytes": 59543,
+      "sha256": "54a0fea889437505f766d6f0003350da64bb4074481717f5ff40e93a3078b89e"
+    },
+    {
+      "path": "chapter-seven-zhou.js",
+      "bytes": 57845,
+      "sha256": "5877341da411e401b5ee71e072563541cd7110b9115e6b69801c833d4b63a59b"
+    },
+    {
+      "path": "chapter-six.js",
+      "bytes": 54245,
+      "sha256": "af907a62c356def34e2bdd4340cb1dce986dedeaa4c299ab5f9b3a91621e8612"
+    },
+    {
+      "path": "chapter-styles.css",
+      "bytes": 3279,
+      "sha256": "9882ee22b2e98acb1a230508e3e9c126d6f318d820dab1575017206a7dbb0248"
+    },
+    {
+      "path": "chapter-ten-lin.js",
+      "bytes": 54553,
+      "sha256": "46aad39f55949f5911b82c4079838072c97f6509ea7dec7afde1ebfd2542d216"
+    },
+    {
+      "path": "chapter-ten-xu.js",
+      "bytes": 57524,
+      "sha256": "82f14b970129fdeb8cada61164f5e6bfc90c14d12805231631c24eda7c9e3547"
+    },
+    {
+      "path": "chapter-ten-ye.js",
+      "bytes": 67628,
+      "sha256": "8ca9572e64c15a57b29b46c6d28e200a337512302bc6997a83bab5da936c4f3b"
+    },
+    {
+      "path": "chapter-ten-zhou.js",
+      "bytes": 69409,
+      "sha256": "a126d2b14898c9a3cc84797bab2fd2ce6ed189cfc6529435f3e93af5e9b4925d"
+    },
+    {
+      "path": "chapter-three.js",
+      "bytes": 55417,
+      "sha256": "d4a647d33b2ce04d7a74fb9980809fb6ecb51d8e0c84776f985b49147aeb4a5a"
+    },
+    {
+      "path": "chapter-two.js",
+      "bytes": 53516,
+      "sha256": "348f9cedd5d2117220d7ba8da353fdad69c4ea25b11eadd7466e5ddb180574f3"
+    },
+    {
+      "path": "engine.js",
+      "bytes": 7401,
+      "sha256": "08b42775a199ba8516c8445c5448a1db6a80de1e18fb985cf234c88f24ab2ef8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6278,
+      "sha256": "7c6e3fa44c3a1ff03eece244f8fb99d7421b8c326548d08d057f700e4c65481a"
+    },
+    {
+      "path": "save-backup.js",
+      "bytes": 2487,
+      "sha256": "72696405dcf369755d874565a484ed9448d7dfe060b3e60cb0a3d21637911b00"
+    },
+    {
+      "path": "story.js",
+      "bytes": 40288,
+      "sha256": "384203b694a1e280e7bc7311f4200c9a302be1c4440460b1466c51b38c0b4191"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 15210,
+      "sha256": "6cf1a6d791d520946e9e956f259e71de44efbed55e69c0f4fda5bae93fb5ae10"
+    },
+    {
+      "path": "启动游戏.bat",
+      "bytes": 37,
+      "sha256": "c369a077a253e26e89b85071fb50bb426ab159e49027572d5f1f18497386f266"
+    },
+    {
+      "path": "开始前读我.txt",
+      "bytes": 1087,
+      "sha256": "2dbf11c237431846931e7f0bfa65a77931ce29c12710afa52ccae98f1f69f748"
+    }
+  ]
+}

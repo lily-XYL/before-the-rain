@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-06",
+  "chapter": "ye8",
+  "source": "chapter-eight-ye.js",
+  "scenes": 101,
+  "gates": 16,
+  "textCharacters": 15497,
+  "choices": 8,
+  "combinations": 1296,
+  "contexts": 12,
+  "paths": 15552,
+  "allVisibleDialogueCovered": true,
+  "totalImplementedTextCharacters": 258894,
+  "totalChapters": 20,
+  "chapterMemories": 58,
+  "finalEndings": 9,
+  "collectionCards": 67,
+  "tests": {
+    "existingRegression": {
+      "tests": 110,
+      "pass": 110,
+      "fail": 0,
+      "skipped": 0,
+      "duration_ms": 1547328.2982
+    },
+    "chapterAndEngine": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "duration_ms": 634669.1701,
+      "newChapterChecks": 6,
+      "repeatedEngineChecks": 6,
+      "paths": 15552,
+      "contexts": 12,
+      "combinations": 1296,
+      "allVisibleLinesCovered": true
+    },
+    "uniqueChecks": 116,
+    "uniquePassed": 116,
+    "failed": 0,
+    "note": "分批执行既有110项，以及新增6项第八章检查和重复6项引擎检查；去重116项全部通过。"
+  },
+  "browserRecord": "ye-eight-browser-verification.json",
+  "browserPassed": true,
+  "assets": {
+    "backgrounds": 22,
+    "originalSprites": 8,
+    "variantSprites": 1,
+    "totalLoaded": 31,
+    "failed": 0,
+    "night": "E:/game/assets/backgrounds/chapter-eight-ye/ye_home.png",
+    "morning": "E:/game/assets/backgrounds/chapter-eight-ye/ye_home_morning.png",
+    "tool": "built-in image_gen.imagegen",
+    "prompts": [
+      "E:/game/assets/backgrounds/chapter-eight-ye/生成记录.json",
+      "E:/game/assets/backgrounds/chapter-eight-ye/晨光生成记录.json"
+    ]
+  },
+  "remaining": "叶澄第九、十章、叶澄最终结局与独身收束篇待制作"
+}

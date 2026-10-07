@@ -1,0 +1,21 @@
+/* Chapter prototype: backgrounds and full-body standing sprites. */
+#bond-button{flex-shrink:0;white-space:nowrap}
+.ending-actions{flex-wrap:wrap}
+.character-stage{position:absolute;inset:90px 11% 120px;display:flex;justify-content:center;align-items:flex-end;gap:9%;pointer-events:none;overflow:hidden;z-index:0}
+.sprite{height:100%;max-height:640px;width:42%;max-width:450px;object-fit:contain;object-position:bottom;transition:filter .35s,opacity .35s;filter:drop-shadow(0 8px 22px #092a3c55)}
+.sprite.listening{filter:brightness(.76) saturate(.8) drop-shadow(0 8px 22px #092a3c55);opacity:.9}.sprite.speaking{filter:drop-shadow(0 8px 24px #092a3c55)}
+.scene-top,.dialogue-box{z-index:2}.chapter-stamp{position:relative;z-index:1;pointer-events:none;opacity:.28}.choice-box{z-index:3}.dialogue-box{background:linear-gradient(120deg,#153638f5,#1d3b3cec)}
+.scene-top small{font-size:9px;letter-spacing:1px}.game-screen .scene-top>div{flex-wrap:wrap;background:#153638c9;border:1px solid #e6e9d92a;padding:8px 12px;backdrop-filter:blur(8px)}.cast-card{display:flex;gap:24px;align-items:center}.cast-card img{width:110px;height:200px;object-fit:contain}.cast-card>div{flex:1}.cast-card>div>small{font-size:9px;color:#86958a}.cast-card h3{font-size:22px}.cast-card p{font-size:12px}.ending-screen{max-width:880px}.scenery{background-position:center center}
+body.playing .shade{background:linear-gradient(0deg,#12373a99,transparent 60%),linear-gradient(90deg,#12363c55,transparent 70%)}
+@media(max-width:900px){.character-stage{inset:108px 3% 145px;gap:2%}.sprite{width:47%;max-height:610px}.scene-top>div{max-width:72%}.scene-top small{border:0;padding-left:0}}
+@media(max-width:560px){.character-stage{inset:116px -15% 180px;gap:0}.sprite{width:50%;max-width:280px;max-height:540px}.scene-top>div{max-width:73%}.scene-top small{line-height:1.8}.cast-card{gap:14px}.cast-card img{width:80px;height:160px}.cast-card h3{font-size:20px}.dialogue-text{min-height:136px}.dialogue-box{min-height:236px}.choice-box>p{text-shadow:0 1px 8px #092a3c,0 0 20px #092a3c}}
+@media(max-height:700px){.character-stage{inset:96px 8% auto;height:320px;position:absolute;opacity:.9}.sprite{max-height:320px}.scene-top small{line-height:1.8}.dialogue-box{margin-top:110px}.choice-box:not([hidden])~.dialogue-box{margin-top:0}}
+.game-screen.many-choices .chapter-stamp{position:absolute;top:160px;left:6%;margin:0}
+.game-screen.many-choices .choice-box{position:relative;top:auto;left:auto;transform:none;width:min(440px,94%);margin:80px auto 32px}
+.game-screen.many-choices .dialogue-box{margin-top:0}
+@media(max-width:560px){.game-screen.many-choices .choice-box{margin-top:40px}}
+.route-review { width: 100%; margin-top: 12px; padding: 12px 16px; border: 1px solid rgba(223, 226, 206, .45); border-radius: 3px; color: #f4e5cb; background: rgba(21, 49, 51, .94); font: inherit; font-size: 13px; cursor: pointer; }
+.route-review:hover, .route-review:focus-visible { background: #365c59; outline: 2px solid #d6b77c; outline-offset: 3px; }
+/* Keep backup actions usable in the narrow settings panel. */
+.backup-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0;max-width:170px}
+@media(max-width:360px){.backup-actions{max-width:85px}.backup-actions button{padding:8px}}

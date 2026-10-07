@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c40">
+  <title>雨停之前 · 百合视觉小说</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chapter-styles.css">
+</head>
+<body>
+  <main id="app">
+    <div class="scenery" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="rain" aria-hidden="true"></div>
+    <header class="topbar">
+      <button class="brand" id="home-button" aria-label="打开主菜单"><span class="brand-symbol">✳</span> 雨停之前 <span class="brand-sub">BEFORE THE RAIN STOPS</span></button>
+      <nav aria-label="游戏菜单">
+        <button data-panel="characters">人物手记</button>
+        <button data-panel="gallery">回忆与结局</button>
+        <button data-panel="settings" class="settings-nav"><span aria-hidden="true">☷</span> 设置</button>
+      </nav>
+    </header>
+
+    <section id="title-screen" class="title-screen">
+      <div class="title-copy">
+        <p class="eyebrow"><span></span> 一封迟到了四年的情书</p>
+        <h1>雨停<span>之前<i>。</i></span></h1>
+        <p class="english-title">BEFORE THE RAIN STOPS</p>
+        <p class="intro">有些相遇，是一场没有结束的雨。<br>有些喜欢，终于等到了说出口的勇气。</p>
+        <div class="title-actions">
+          <button id="start-button" class="primary">开始故事 <span>↗</span></button>
+          <button id="continue-button" class="secondary" disabled>继续故事 <span>→</span></button>
+        </div>
+        <button class="load-link" data-panel="load">读取存档 <span>↗</span></button>
+      </div>
+      <div class="vertical-note" aria-hidden="true">这个夏天，把未说完的话交给你。</div>
+      <div class="cover-caption"><span class="small-spark">✧</span><div><span>与你一起，等一场晴天</span><small>共通六章 · 四条恋爱路线 · 独身群像收束</small></div></div>
+      <footer class="title-footer"><span>一段关于重逢、书信与勇气的故事</span><span>LIN · XU · ZHOU · YE <i>✦</i></span></footer>
+    </section>
+
+    <section id="game-screen" class="game-screen" hidden>
+      <div class="scene-top"><div><span id="chapter-label">第一章 · 百分之二十的雨</span><small id="location-label">六月 / 旧书店</small></div><button id="bond-button" title="查看本次经历" aria-label="本次经历"><span>♡</span> <span id="bond-label">雨中重逢</span></button></div>
+      <div id="character-stage" class="character-stage" aria-label="出场人物"><img id="sprite-left" class="sprite" alt="" hidden><img id="sprite-right" class="sprite" alt="" hidden></div>
+      <div class="chapter-stamp" aria-hidden="true"><span id="chapter-number">01</span></div>
+      <div id="choice-box" class="choice-box" hidden><p>这一刻，你想怎样选择？</p><div id="choices"></div><button id="route-review-button" class="route-review" hidden>回到第四章相处分歧 ↶</button></div>
+      <section id="dialogue-box" class="dialogue-box" aria-label="剧情对话">
+        <div class="dialogue-meta"><span id="speaker">沈知夏</span><span class="dialogue-flower" aria-hidden="true">✧</span></div>
+        <button id="advance-button" class="dialogue-text" aria-label="继续对话"><span id="dialogue-text"></span><span id="next-indicator" aria-hidden="true">◇</span></button>
+        <div class="dialogue-toolbar"><span class="controls-hint">点击 / 空格 继续</span><div><button id="auto-button" aria-pressed="false">自动</button><button data-panel="history">回看</button><button id="quick-save-button">快存</button><button id="quick-load-button">快读</button><button data-panel="save">存档</button><button data-panel="load">读档</button><button id="menu-button">菜单</button></div></div>
+      </section>
+    </section>
+
+    <section id="ending-screen" class="ending-screen" hidden>
+      <p class="eyebrow">OUR STORY, YOUR CHOICE</p><span class="ending-flower">✧</span>
+      <p id="ending-type" class="ending-type"></p><h2 id="ending-title"></h2><p id="ending-description"></p>
+      <p id="ending-quote" class="ending-quote"></p>
+      <div class="ending-actions"><button id="next-chapter-button" class="primary" hidden>继续第二章 <span>↗</span></button><button id="replay-button" class="secondary">从头阅读 <span>↗</span></button><button id="ending-home-button" class="secondary">回到标题</button></div>
+      <small id="ending-note">经历已收入章节回忆。</small>
+    </section>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+
+  <dialog id="panel" aria-labelledby="panel-title">
+    <div class="panel-heading"><div><small>BEFORE THE RAIN STOPS</small><h2 id="panel-title"></h2></div><button id="close-panel" aria-label="关闭窗口">×</button></div>
+    <div id="panel-content"></div>
+  </dialog>
+  <script src="assets/characters/v1/cast.js"></script>
+  <script src="chapter-one.js"></script>
+  <script src="chapter-two.js"></script>
+  <script src="chapter-three.js"></script>
+  <script src="chapter-four.js"></script>
+  <script src="chapter-five.js"></script>
+  <script src="chapter-six.js"></script>
+  <script src="chapter-seven-lin.js"></script>
+  <script src="chapter-eight-lin.js"></script>
+  <script src="chapter-nine-lin.js"></script>
+  <script src="chapter-ten-lin.js"></script>
+  <script src="chapter-seven-xu.js"></script>
+  <script src="chapter-eight-xu.js"></script>
+  <script src="chapter-nine-xu.js"></script>
+  <script src="chapter-ten-xu.js"></script>
+  <script src="chapter-seven-zhou.js"></script>
+  <script src="chapter-eight-zhou.js"></script>
+  <script src="chapter-nine-zhou.js"></script>
+  <script src="chapter-ten-zhou.js"></script>
+  <script src="chapter-seven-ye.js"></script>
+  <script src="chapter-eight-ye.js"></script>
+  <script src="chapter-nine-ye.js"></script>
+  <script src="chapter-ten-ye.js"></script>
+  <script src="chapter-self-epilogue.js"></script>
+  <script src="story.js"></script>
+  <script src="engine.js"></script>
+  <script src="save-backup.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

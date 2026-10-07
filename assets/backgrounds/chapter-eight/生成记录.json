@@ -1,0 +1,7 @@
+{
+  "tool": "image_gen.imagegen",
+  "reference": "assets/backgrounds/chapter-one/bookshop.png",
+  "prompt": "Use case: illustration-story. Asset: wide 16:9 landscape background for the existing adult romance visual novel 雨停之前. Attached bookshop image is only a palette, rendering and linework reference, not an edit target. Create a new interior: Lin Wan's modest short-term rented room near the university, an ordinary warm living and study space for an evening conversation and breakfast. Eye-level wide view, wooden floor, ivory walls, muted sage curtains at a window, a small wooden dining table with two chairs toward one side, two ceramic mugs, closed green and gray notebooks with no text, a simple kitchenette behind, a narrow bookshelf with botanical field guides, a potted leafy plant, and a partly packed canvas travel bag by the shelf. A tidy sofa and folded blanket on the other side. Late afternoon honey light, soft warm table lamp, tranquil lived-in atmosphere. Refined hand-painted anime environment, subtle fine architectural lines, muted petrol teal, sage, ivory and honey palette, match reference illustration style. Clear central foreground for two standing character sprites, keep lower quarter simple for dialogue overlay. No people, no readable text, no logos, no watermark, no UI. No luxury decor.",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-c58928d7-6b0e-4bf0-b3dd-9690d4eada10.png",
+  "output": "lin_home.png"
+}

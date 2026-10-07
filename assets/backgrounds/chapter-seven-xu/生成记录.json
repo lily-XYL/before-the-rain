@@ -1,0 +1,7 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: illustration-story. Create one 16:9 anime visual-novel background of a modest Chinese neighborhood noodle shop near a university, summer evening at 18:20, open until late. Attached workspace illustration is STYLE REFERENCE ONLY, do not depict a design studio. Match its hand painted warm detailed anime environments, muted petrol teal, sage, cream and honey lighting. Eye-level view from inside: two simple small wooden tables with chairs, ceramic condiment jars, plain paper menu cards with no writing, side window at left showing dusk light and narrow lived-in street, warm practical pendant lamps, far-back kitchen counter with stainless pot and gentle steam. Tables initially clean before ordering, no huge feast, no romantic decorations. Ordinary affordable shop, welcoming and slightly worn, not luxury restaurant. No people, no readable letters or numbers, no captions, no signatures, no watermark, no logos, no interface. Spacious center foreground and quiet lower quarter reserved for standing character sprites and dialogue. Wide composition, preserve natural environmental perspective.",
+  "reference": "E:/game/assets/backgrounds/chapter-two/studio.png",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-d24ba5ed-99a3-4345-90cc-032621b3fac0.png",
+  "output": "E:/game/assets/backgrounds/chapter-seven-xu/noodle_shop.png"
+}

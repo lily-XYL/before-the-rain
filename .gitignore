@@ -1,0 +1,53 @@
+# Dependencies and downloaded build tools
+node_modules/
+.build-cache/
+
+# Private signing material and local credentials
+android/signing/
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.pem
+*.key
+.env
+.env.*
+!*.example
+
+# Generated platform copies and build intermediates
+android/build/
+android/assets/
+desktop/game/
+
+# Binaries belong in GitHub Releases
+*.exe
+*.apk
+*.idsig
+*.zip
+*.7z
+
+# Keep the verified web snapshot and text verification records
+/release/*
+!/release/雨停之前_v1.0.0/
+!/release/verification/
+!/release/SHA256SUMS.txt
+/release/verification/**
+!/release/verification/**/
+!/release/verification/**/*.md
+!/release/verification/content-audit.json
+!/release/verification/release-summary.json
+!/release/verification/desktop/desktop-release.json
+!/release/verification/android/android-release.json
+
+# Development screenshots and superseded prototype
+/*.png
+/剧本/*.png
+/archive/
+
+# Local editor / runtime state
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.vscode/
+.idea/

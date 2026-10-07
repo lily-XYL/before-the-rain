@@ -1,0 +1,33 @@
+{
+  "tool": "image_gen.imagegen",
+  "assets": [
+    {
+      "key": "farewell_exhibit",
+      "reference": "E:/game/assets/backgrounds/chapter-one/bookshop.png",
+      "prompt": "Use case: illustration-story / precise-object-edit. Edit the attached Guiyu bookshop background for its final small farewell letter exhibition, June afternoon. Preserve original window left, bookshelves, wood floor, table, chairs, counter and camera, painterly anime rendering. Warm gentle daylight replacing rainy evening outside, muted sage and petrol teal palette. Add modest tabletop booklet stacks, a simple writing corner with blank paper and pens, a small corkboard near the right counter holding unmarked ivory cards, a few packing boxes neatly tucked aside. It is an intimate self-organized bookstore event, not a huge exhibition. No people, no readable words, no logos, no watermark, no UI. Center foreground and lower quarter clear for standing character sprites and dialogue. Wide 16:9.",
+      "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-b886cbd3-9f84-4d02-b9fc-ce32ad876941.png",
+      "output": "E:/game/assets/backgrounds/chapter-ten/farewell_exhibit.png"
+    },
+    {
+      "key": "empty_bookshop",
+      "reference": "E:/game/assets/backgrounds/chapter-one/bookshop.png",
+      "prompt": "Use case: illustration-story / precise-object-edit. Edit attached Guiyu bookshop for the last morning after the store has moved out. Preserve precisely original architecture, large left window, wall of wooden shelves, wood floor and counter, same perspective and painterly anime style. Remove books, loose posters, flower arrangements and most furniture: shelves now empty, one plain chair remains by left window, two closed cardboard boxes near right counter awaiting pickup, tiny brass key on counter with no labels. Soft summer morning sunlight, quiet warm bittersweet atmosphere, not abandoned or decayed, swept clean room. Original nearby university silhouette outside. No people, no readable text, no logos, no watermark, no UI. Clear central floor and lower quarter for sprites/dialogue. Wide 16:9.",
+      "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-8a357178-509d-4122-8da0-f6815026c9af.png",
+      "output": "E:/game/assets/backgrounds/chapter-ten/empty_bookshop.png"
+    },
+    {
+      "key": "train_station",
+      "reference": "E:/game/assets/backgrounds/chapter-one/bookshop.png",
+      "prompt": "Use case: illustration-story. New wide 16:9 visual novel background: ordinary Chinese intercity RAILWAY STATION departure waiting hall in fictional Linjiang, early summer bright afternoon. Attached bookshop is a rendering/palette style reference only, not an edit target. Eye-level view inside safe public waiting area before ticket gates; sage-gray seats at one side, high glass windows with sunlight, station clock without readable numerals, distant ticket gates, blurred unreadable sign panels and a train visible far beyond glass. No readable destination/time screens. Muted petrol teal, ivory, soft honey sunlight, refined detailed hand painted anime environment matching attached. Modest lived-in modern station, no crowds or people, no logos or watermark, no UI. Spacious central foreground for two standing sprites, simple lower quarter for dialogue. Not bus stop, not track-level platform.",
+      "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-84e3b526-8ef6-4623-9f04-801bffc283ff.png",
+      "output": "E:/game/assets/backgrounds/chapter-ten/train_station.png"
+    },
+    {
+      "key": "autumn_riverside",
+      "reference": "E:/game/assets/backgrounds/chapter-four/riverside.png",
+      "prompt": "Use case: illustration-story / lighting-weather edit. Edit attached riverside walkway for an ordinary September after-work reunion in the same adult romance visual novel. Preserve river railing, stone paving, bench at right, lamppost, far-shore buildings and bridge, same perspective and painterly anime technique. Gentle early autumn golden daylight near sunset, lightly golden foliage mixed with still green willow leaves, only a few fallen leaves on pavement, clear dry weather, muted petrol teal river and honey highlights. No snow, no dramatic autumn red forest. Small ordinary daily-life warmth, not a grand romantic event. No people, no readable text, no logos, no watermark, no UI. Central foreground and lower quarter clear for two sprites/dialogue. Wide 16:9.",
+      "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-b460a833-49ff-4b1f-9213-a6cb8637df00.png",
+      "output": "E:/game/assets/backgrounds/chapter-ten/autumn_riverside.png"
+    }
+  ]
+}

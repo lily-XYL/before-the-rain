@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-06",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in edit",
+  "prompt": "Use case: lighting-weather. Edit target: the attached Ye Cheng apartment visual novel background, E:/game/assets/backgrounds/chapter-eight-ye/ye_home.png. Create a matching EARLY SUMMER MORNING, 08:00, version of exactly this room. Change ONLY the illumination and view through the window: natural pale golden morning daylight, soft sun entering the living room, fresh green foliage outside, pale blue daytime sky with subtle white clouds; neighboring house windows and street lamps no longer lit. Indoor pendant and reading lamp switched off. Keep exactly the same composition, camera angle, aspect ratio, room dimensions, furniture, sofa, cotton blanket, two mismatched mugs, fern and other plants, closed camera box, closed laptop, small kitchenette, striped apron, shelves and every object position. Preserve the painterly anime background style and fine wood textures. A warm comfortable ordinary morning, not nighttime, no artificial dark blue twilight, not an overexposed white room. No people, bodies, silhouettes, reflections of people, readable text, logos, UI or watermarks. Entire opaque image. Do not add or remove objects, do not change architecture or colors of furnishings.",
+  "reference": "E:/game/assets/backgrounds/chapter-eight-ye/ye_home.png",
+  "referenceRole": "edit target",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-f9e58a3e-7440-4cdf-89cc-2382d44f6609.png",
+  "output": "E:/game/assets/backgrounds/chapter-eight-ye/ye_home_morning.png"
+}

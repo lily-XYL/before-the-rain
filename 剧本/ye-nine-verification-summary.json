@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-06",
+  "chapter": "ye9",
+  "source": "chapter-nine-ye.js",
+  "scenes": 63,
+  "gates": 11,
+  "textCharacters": 9822,
+  "choices": 6,
+  "combinations": 216,
+  "contexts": 24,
+  "paths": 5184,
+  "allVisibleDialogueCovered": true,
+  "totalImplementedTextCharacters": 268716,
+  "totalChapters": 21,
+  "chapterMemories": 61,
+  "finalEndings": 9,
+  "collectionCards": 70,
+  "tests": {
+    "affectedChaptersAndEngine": {
+      "command": "node --test --test-concurrency=2 tests/chapter-nine-ye.test.cjs tests/engine.test.cjs tests/chapter-eight-ye.test.cjs",
+      "tests": 18,
+      "pass": 18,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "duration_ms": 382323.58,
+      "newChapterChecks": 6,
+      "eighthChapterChecks": 6,
+      "engineChecks": 6
+    },
+    "afterNameCorrection": {
+      "command": "node --test tests/chapter-nine-ye.test.cjs",
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "skipped": 0,
+      "duration_ms": 159182.7235,
+      "repeatedChecks": true
+    },
+    "uniqueChecks": 18,
+    "uniquePassed": 18,
+    "note": "本次检查新增九章、受影响八章和引擎，共18项；姓名校正后重复九章6项。未重跑其他全部章节；第八章发布时完整116项回归保留历史记录。"
+  },
+  "browserRecord": "ye-nine-browser-verification.json",
+  "browserPassed": true,
+  "browserChecks": 9,
+  "screenshots": 12,
+  "pageErrors": 0,
+  "assets": {
+    "backgrounds": 22,
+    "originalSprites": 8,
+    "variantSprites": 1,
+    "totalLoaded": 31,
+    "failed": 0,
+    "newImages": 0
+  },
+  "remaining": "叶澄第十章、叶澄三种最终结局与秋日尾声、独身收束篇待制作"
+}

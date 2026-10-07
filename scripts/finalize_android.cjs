@@ -1,0 +1,12 @@
+'use strict';
+const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto'), assert = require('node:assert/strict');
+const root = path.resolve(__dirname, '..'), out = path.join(root, 'release/verification/android');
+const verification = JSON.parse(fs.readFileSync(path.join(out, 'apk-verification.json'), 'utf8'));
+assert.equal(verification.verification, 'passed'); assert.equal(verification.assetFilesChecked, 66); assert.equal(verification.uiChecks.length, 13);
+const bytes = fs.readFileSync(verification.file);
+assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), verification.sha256);
+const record = `# 雨停之前 · Android APK 验收\n\n验收日期：2026-10-07。\n\n交付文件：${verification.file}\n\n大小：${bytes.length} 字节（${(bytes.length / 1024 / 1024).toFixed(2)} MiB）。SHA-256：\n\n\`${verification.sha256}\`\n\n包名 local.beforetherain.game，版本 1.0.0 / versionCode 1，最低 Android 8.0（API 26），目标 API 34。原生代码仅使用系统 Android API，通用 APK 不含特定 CPU 架构的动态库。运行依赖手机内置且较新的 WebView，全部剧情与图片离线内置。\n\nAPK Signature Scheme v2、v3 验签和 ZIP 对齐通过。实际 APK 的 66 个运行文件逐一与手机测试目录比对，未修改的故事、引擎、收藏模块和全部 33 张 PNG 还与原完整版清单比对；23 个章节模块、13 个最终结局、74 张收藏卡保留。DEX 包含正确的启动 Activity 和原生备份、全屏、文件结果回调。所有 ZIP 路径均为 Android 可识别的正斜杠格式，不含签名私钥、密码、测试记录、玩家存档、Node 依赖或 EXE。Manifest 不请求联网或广泛存储权限。\n\n手机页面通过 320×568、360×640、390×844、412×915、667×375、844×390、915×412、768×1024 八种尺寸的触摸模拟验收。对话工具栏持续可见，多选项区域独立滚动，常用按钮至少约 44 像素触摸高度；横屏对话与选项并排，旋转不更改当前存档。菜单、书签保存与重载、13 个结局、74 张收藏卡和 33 张图片加载均通过。实际 Windows EXE 导出的备份经手机适配层成功导入，无效备份不更改进度。十三组页面检查通过，无渲染错误。\n\n原生代码实现 Android 文件选择器、返回键、刘海／系统栏／底部手势区域适配，以及进入后台时暂停音乐与自动阅读。浏览器验收中的原生桥是测试替身，**未在 Android 实机或模拟器安装测试**，尚未实机验收上述原生平台行为。本机 adb 没有连接设备。\n\n编译使用官方 R8 9.5.22（已核对发布校验值）解决旧版 SDK D8 与 Java 21 的兼容问题。Windows AAPT2 34 的素材路径问题已通过 JAR 写入标准 ZIP 路径修复，再进行对齐和签名。签名密钥保留在 android/signing，仅供后续更新构建使用，不包含在 APK。\n\n详细证据：apk-build.json、apk-verification.json、signature.txt、metadata.txt、mobile-browser.json 与手机布局截图。早期受沙箱阻止的浏览器日志仍保留，最终验收以 mobile-browser.json 为准。\n`;
+fs.writeFileSync(path.join(out, 'APK_验收记录.md'), record);
+const release = { product: '雨停之前', version: '1.0.0', platform: 'Android 8.0+', file: verification.file, bytes: verification.bytes, sha256: verification.sha256, signed: true, verification: 'passed', uiChecks: verification.uiChecks.length, assets: verification.assetFilesChecked, nativeDeviceTested: false, completedAt: new Date().toISOString() };
+fs.writeFileSync(path.join(out, 'android-release.json'), JSON.stringify(release, null, 2));
+console.log(JSON.stringify(release, null, 2));

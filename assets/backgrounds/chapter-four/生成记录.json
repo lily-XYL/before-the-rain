@@ -1,0 +1,21 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "E:/game/assets/backgrounds/chapter-one/bookshop.png",
+  "items": [
+    {
+      "id": "campus",
+      "prompt": "Use case: illustration-story. Asset type: 16:9 landscape background for the existing contemporary Chinese yuri visual novel Before the Rain Stops. Input image is a palette and painterly style reference only; do not copy its bookshop subject or European architecture. Refined hand-painted anime environment, delicate architectural lines, atmospheric depth, muted petrol teal, ivory, sage, wood and honey light. Eye-level wide composition, clear central foreground for two standing sprites and a lower dialogue overlay. No people, no silhouettes, no readable text, no logos, no watermark, no UI. Scene: Chinese university campus courtyard on June graduation morning after rain. Modest red-brick teaching hall in background, wide stone steps to one side, shade trees, wet paving reflecting soft clear morning light, hydrangea pots, an ordinary bench, small blank graduation decoration ribbons by the hall doors. Grounded everyday campus, not palace, no European towers. Quiet sense of beginning and bittersweet leaving. Central walking space clear, sky through green leaves.",
+      "file": "campus.png"
+    },
+    {
+      "id": "riverside",
+      "prompt": "Use case: illustration-story. Asset type: 16:9 landscape background for the existing contemporary Chinese yuri visual novel Before the Rain Stops. Input image is a palette and painterly style reference only; do not copy its bookshop subject or European architecture. Refined hand-painted anime environment, delicate architectural lines, atmospheric depth, muted petrol teal, ivory, sage, wood and honey light. Eye-level wide composition, clear central foreground for two standing sprites and a lower dialogue overlay. No people, no silhouettes, no readable text, no logos, no watermark, no UI. Scene: June early evening riverside footpath in a Chinese university town, low concrete embankment with a metal railing, broad slow river, softly lit low-rise buildings across water, warm distant lamps, willow branches framing one edge, a small simple bench by path, faint railway overpass in distance. Blue green dusk and warm honey sky reflections, calm intimate walk near the town station. Clear foreground paving, realistic everyday riverbank, no boats with people.",
+      "file": "riverside.png"
+    },
+    {
+      "id": "venue",
+      "prompt": "Use case: illustration-story. Asset type: 16:9 landscape background for the existing contemporary Chinese yuri visual novel Before the Rain Stops. Input image is a palette and painterly style reference only; do not copy its bookshop subject or European architecture. Refined hand-painted anime environment, delicate architectural lines, atmospheric depth, muted petrol teal, ivory, sage, wood and honey light. Eye-level wide composition, clear central foreground for two standing sprites and a lower dialogue overlay. No people, no silhouettes, no readable text, no logos, no watermark, no UI. Scene: small neighborhood cafe's intimate acoustic music corner at June evening. Tiny low wooden stage at far right with microphone stand and acoustic guitar on stand, small amplifier, neatly coiled cable, a few mismatched wooden chairs facing stage, unlit candles in glass jars, modest warm overhead lamps, old plaster wall with dusty teal accents, a side window showing evening blue. This is a simple twelve-seat independent performance space, not huge theater or luxury lounge. Empty venue, clear central foreground for characters and dialogue.",
+      "file": "venue.png"
+    }
+  ]
+}

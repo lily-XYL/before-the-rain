@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-06",
+  "chapter": "zhou10",
+  "scenes": 88,
+  "gates": 24,
+  "characters": 13932,
+  "combinations": 288,
+  "histories": 24,
+  "paths": 6912,
+  "totalCharacters": 230484,
+  "fullRegression": {
+    "tests": 104,
+    "pass": 104,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 715065.8041
+  },
+  "browser": {
+    "mode": "headless Edge via Playwright",
+    "url": "file:///E:/game/index.html",
+    "assets": 28,
+    "backgrounds": 20,
+    "characters": 8,
+    "assetFailures": 0,
+    "pageErrors": [],
+    "galleryCards": 61,
+    "finals": 9,
+    "chapterMemories": 52,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 320,
+        "height": 668
+      },
+      {
+        "width": 844,
+        "height": 390
+      }
+    ],
+    "screenshots": [
+      "zhou-ten-card-desktop.png",
+      "zhou-ten-choices-1440.png",
+      "zhou-ten-choices-320.png",
+      "zhou-ten-choices-390.png",
+      "zhou-ten-choices-844.png",
+      "zhou-ten-farewell-desktop.png",
+      "zhou-ten-gallery-finals-mobile.png",
+      "zhou-ten-gallery-mobile.png",
+      "zhou-ten-he-desktop.png",
+      "zhou-ten-he-mobile.png",
+      "zhou-ten-home-desktop.png",
+      "zhou-ten-ne-desktop.png",
+      "zhou-ten-title-320.png"
+    ]
+  },
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "output": "assets/backgrounds/chapter-ten-zhou/zhou_home.png",
+    "record": "assets/backgrounds/chapter-ten-zhou/生成记录.json"
+  },
+  "scope": "24 representative real nine-chapter histories times every chapter-ten decision combination; not the Cartesian product of all prior historical decisions."
+}

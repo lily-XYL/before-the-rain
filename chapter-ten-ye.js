@@ -1,0 +1,509 @@
+(function (root) {
+  'use strict';
+  const scenes = [], gates = [];
+  const script = text => text.trim().split('\n').map(line => {
+    const i = line.indexOf('｜');
+    if (i < 1) throw new Error('叶澄第十章对白缺少说话人物。');
+    return [line.slice(0,i).trim(),line.slice(i+1).trim()];
+  });
+  const add = (id,title,location,time,cast,text,next,extra={}) => scenes.push({ id,title,location,time,cast,lines:script(text),next,...extra });
+  const variation = (variantBy,variants) => ({ variantBy,variants:Object.fromEntries(Object.entries(variants).map(([key,text])=>[key,script(text)])) });
+  const gate = (id,redirectBy,targets) => gates.push({ id,redirectBy,targets });
+  const pair = id => ['shen_zhixia',id], ye = pair('ye_cheng'), self = ['shen_zhixia'];
+
+  add('y10_start','Y10-01 · 发送以后，还有自己的下午','dorm','六月二十五日 · 13:00',pair('lu_yao'),`
+旁白｜十一点的完整材料已经收到回执。我将文件夹关上，陆遥正在用一张便利贴抢救她不太好看的箱子编号。
+陆遥｜这个六会不会被看成九？以后寄到新家，先收到一个倒着的夏天。
+沈知夏｜在下面画一条线。也给我今天下午留一点，不继续改已经交过的说明。
+旁白｜她把笔递过来。我在数字下划了一道，忽然发现手松开鼠标以后，还有很多可以认真做的小事。
+陆遥｜二十六号两箱，二十八号装箱和晚饭，二十九号七点五十出门，九点二十车次。你可以谈恋爱，别把我寄到出版社。
+旁白｜我笑着答知道。明天叶澄的业务答复到十七点，影片与现场条件也要确认；旧册子四本隔离，替换报价没有被我们悄悄付掉。
+  `,'y10_entry_gate',{ flags:{ y10PrivateMeetingKept:false,y10HeldHands:false,y10Kissed:false,y10HomeEntered:false,y10StayedOvernight:false,y10BreakfastKept:false,y10PrivateRecorded:false,y10OldPrivateClipImported:false,y10JointPhotoImported:false,y10MaintenanceClipImported:false,y10OriginalWetEquipmentReenergized:false,y10ReprintOrdered:false,y10ReplacementPaid:false,y10AllOthersForgaveClaimed:false,y10CallsBooked:false,y10CallsCancelled:false,y10ShenJobStarted:false,y10ProjectStarted:false,y10ProjectCompleted:false,y10AutumnKept:false } });
+  gate('y10_entry_gate','relationshipStatus',{ girlfriends:'y10_entry_couple',tryingDates:'y10_entry_dates',gettingToKnow:'y10_entry_learning',needsConversation:'y10_entry_paused' });
+  add('y10_entry_couple','女朋友，不用占满全部等待','dorm','六月二十五日 · 13:10',self,`
+叶澄 · 消息｜你发件了。我也要发完自己的目录，之后想跟你讲一件和片子没关系的事。
+沈知夏 · 消息｜橡皮分出胜负了吗？
+叶澄 · 消息｜都输给我昨天忘记削的铅笔。还有未来一个月，想等你也有空的时候自己讲。
+旁白｜我们仍是女朋友，昨夜牵手、只聊或休息都保留。我给她一个实际能谈的下午时段，没有把想听解释成现在必须马上答完。
+  `,'y10_prior_choice',{flags:{y10EntryStatus:'girlfriends'}});
+  add('y10_entry_dates','原约会，也要给未来具体的声音','dorm','六月二十五日 · 13:10',self,`
+叶澄 · 消息｜昨天的十分钟收到。四周项目的详细条件明天会核，想问问我们之后怎样联系。
+沈知夏 · 消息｜愿意谈。不是把想约会自动变成一直在线。
+旁白｜我们还在试着约会，称呼没有提前增加。今晚住哪里和将来要怎样继续，也各自需要真实的回答。
+  `,'y10_prior_choice',{flags:{y10EntryStatus:'tryingDates'}});
+  add('y10_entry_learning','杯子还歪，谈话可以慢一点','dorm','六月二十五日 · 13:10',self,`
+叶澄 · 消息｜杯子的线改直了，反而不像那个杯子。准备先放一放，下午有空谈一点之后的安排吗？
+沈知夏 · 消息｜有，先问各自真正能给什么。
+旁白｜我们愿意了解，却还没有开始约会。昨晚十分钟的谈话有它自己的位置，不需要为了赶上别人就添一份称呼。
+  `,'y10_prior_choice',{flags:{y10EntryStatus:'gettingToKnow'}});
+  add('y10_entry_paused','合作消息，不会直接成为邀约','dorm','六月二十五日 · 13:10',self,`
+旁白｜工作群里先收到明天核范围的时间。原暂停之后可能仅愿意再谈，也可能仍未准备好，这两件事按实际保留。
+叶澄 · 工作消息｜明天十点核目录，十六点半业务答复。需要新增私人谈话的话，请另外问，我不会从工作收到推已经答应。
+旁白｜我读了一遍。以前靠近过是真的，今天停在这里也是真的；如果想再谈，需要做完那些还没有说清的事。
+  `,'y10_prior_choice',{flags:{y10EntryStatus:'needsConversation'}});
+  add('y10_prior_choice','选择一 · 最后一章，也不能省略旧事','dorm','六月二十五日 · 13:30',self,'旁白｜下午不是用一句都快结束了把尚未回应的部分盖过去。今天能做的，仍由自己实际做。',null,{choices:[
+    {text:'按原记录实际回应未完成的事，也说出自己现在的需要。',flags:{y10PriorChoice:'act'},next:'y10_pending_gate'},
+    {text:'明确这次仍没有准备好，先保留现状，不借工作推进私人关系。',flags:{y10PriorChoice:'hold'},next:'y10_prior_hold'}
+  ]});
+  gate('y10_pending_gate','pendingOmittedConversation',{true:'y10_omitted_gate',false:'y10_demand_gate'});
+  gate('y10_omitted_gate','omittedPerson',{lin:'y10_repair_lin',xu:'y10_repair_xu',zhou:'y10_repair_zhou',ye:'y10_repair_ye'});
+  const repairs = {
+    lin:['lin_wan','林晚','朗读段仍由你自己定，不把我重写的说明当成你已经同意。','收到本次修改。以前没完成的那天仍留着，今天确认的是这一轮。'],
+    xu:['xu_jianwei','许见微','工作量按这一轮实际能做的量重列，不把你写成已经接了额外全部校对。','这份量我确认。其他人的答复分别取，不要用我一句收到替大家盖章。'],
+    zhou:['zhou_zhi','周栀','今天核你自己愿意讲的段落，不把私下旋律塞进节目，也不替你确认额外时长。','这一轮收到。原来没谈完的事现在真的谈了，但没有把之前补成已经完成。'],
+    ye:['ye_cheng','叶澄','撤回替你解释情绪的文字，按原说明实际改完，不借你愿意听就自动加私人用法。','确认本次修改。谢谢你也说自己为什么不舒服，不只交一个正确答案。']
+  };
+  for (const [key,[id,name,a,b]] of Object.entries(repairs)) add('y10_repair_'+key,'实际确认 · '+name,'studio','六月二十五日 · 14:00–14:20',pair(id),`
+旁白｜我按原未完成记录联系${name}，发这一轮具体改过的内容。没有把以前的缺席补成到场，也没有顺手替其余伙伴写同意。
+沈知夏｜${a}
+${name}｜${b}
+旁白｜二十分钟实际结束，确认这一件旧欠项。我把收到与愿不愿意私人继续分别放好，没有把道歉当成需要得到亲近的票。
+  `,'y10_demand_gate',{flags:{pendingOmittedConversation:false,repairStarted:true,omittedContribution:'confirmedPartOnly',y10OldRepairKept:true}});
+  gate('y10_demand_gate','y8AllHistoryDemanded',{true:'y10_demand_old_gate',false:'y10_advice_gate'});
+  gate('y10_demand_old_gate','y8DemandWithdrawn',{true:'y10_advice_gate',false:'y10_demand_ninth_gate'});
+  gate('y10_demand_ninth_gate','y9OldDemandWithdrawn',{true:'y10_advice_gate',false:'y10_demand_withdraw'});
+  add('y10_demand_withdraw','把未撤回的索要，真正收回来','dorm','六月二十五日 · 14:25',self,`
+沈知夏 · 消息｜之前要求交出全部过去与相册来证明信任，这个要求现在明确撤回。你没愿意讲的部分可以留着，不由我替它们定意义。
+叶澄 · 消息｜收到。今天听见这份撤回，原来拒绝过的事实仍保留，也不等于现在就已经恢复约会。
+旁白｜我没有让她发相册做一份撤回成功的证明。句子真正说出去以后，自己需要讲的事也仍不能交给她猜。
+  `,'y10_advice_gate',{flags:{y10OldDemandWithdrawn:true}});
+  gate('y10_advice_gate','y9UnauthorizedFilmUseOccurred',{true:'y10_advice_old_gate',false:'y10_prior_response'});
+  gate('y10_advice_old_gate','y9OwnBadAdviceWithdrawn',{true:'y10_prior_response',false:'y10_advice_withdraw'});
+  add('y10_advice_withdraw','自己的坏建议，自己收回','dorm','六月二十五日 · 14:30',self,`
+沈知夏 · 消息｜我那句先放进去、感动以后用途更好谈，现在明确收回。感动不替陆遥与林姨答应，我赞成也不代表她们赞成。
+叶澄 · 消息｜收到你撤回自己的建议。我实际导入是我自己的决定，已经发生、告知和移除的事保留，不能让你替我拿到原谅。
+旁白｜片段已经不在候选里，维修副本也按昨天要求处理了。这些不需要再表演一次，改变的是我终于答自己的那一句。
+  `,'y10_prior_response',{flags:{y10OwnBadAdviceWithdrawn:true}});
+  add('y10_prior_response','今天给出自己的感受，不重做昨夜','dorm','六月二十五日 · 14:40',self,`
+沈知夏 · 消息｜我害怕开口让别人失望，所以常常先交一份很稳的办法。现在想说，也需要有人听我不知道怎样答的时候。
+叶澄 · 消息｜愿意听。我害怕没有留下图像就证明不了认真，昨天也看见这份怕会让人做错。今天想把想见你直接说，不用片子替我说。
+旁白｜我们听完彼此，分别确认今天愿意谈未来；旧暂停还停在原称呼，接下来先是一次新的谈话。
+  `,'y10_future_choice',{flags:{y10PriorReady:true,y10PriorResponseKept:true}});
+  add('y10_prior_hold','没有准备好，也讲清这次的范围','dorm','六月二十五日 · 14:00',self,`
+沈知夏 · 消息｜这次仍没准备好补完那些回应。工作可以继续核，原愿意的关系按原范围，不用今天一轮定稿消掉没完成的地方。
+叶澄 · 消息｜收到。原愿意保留，原暂停也保留；合作里可以核未来工作条件，私人没有得到的新答复先不填。
+旁白｜我关掉聊天窗，没有假装对方已经替我写完道歉。晚点还能讲能做到的量，也不能把一份联系表用来跳过这份空白。
+  `,'y10_hold_ready_gate',{flags:{y10PriorResponseKept:false}});
+  gate('y10_hold_ready_gate','y9Outcome',{together:'y10_hold_open',reopen:'y10_hold_open',paused:'y10_hold_closed'});
+  add('y10_hold_open','已有的愿意，没有因放慢消失','dorm','六月二十五日 · 14:10',self,'旁白｜上一章实际得到的继续或再谈保留，今天不补做已经做过的段落。未回应的其他伙伴仍有自己的待办，不能因为我有人愿意听就将它们全部清空。','y10_future_choice',{flags:{y10PriorReady:true}});
+  add('y10_hold_closed','原暂停不从一条工作消息打开','dorm','六月二十五日 · 14:10',self,'旁白｜原私人回应仍未完成，这次只谈能做的工作和各自生活。知道下一份项目的日期，不等于已经有资格为她排私人时间。','y10_future_choice',{flags:{y10PriorReady:false}});
+
+  add('y10_future_choice','选择二 · 四周以后，不用先承诺永远','dorm','六月二十五日 · 15:00',self,'旁白｜她讲七月八日至八月四日的项目，我想见她的愿望也真实。现在说的，是自己的期待，不是替她选择一份人生。',null,{choices:[
+    {text:'具体说自己的想念，讨论能做到的联系量，职业与原始素材仍由本人决定。',flags:{y10FutureChoice:'concrete'},next:'y10_future_concrete'},
+    {text:'愿意先有限试行，只约一个真实能给的时段，再看后来的生活。',flags:{y10FutureChoice:'trial'},next:'y10_future_trial'},
+    {text:'要求她不接外地工作，并交出全部原始素材来证明不会再有隐瞒。',flags:{y10FutureChoice:'control'},next:'y10_future_control'}
+  ]});
+  add('y10_future_concrete','想念可以说，条件也能具体','dorm','六月二十五日 · 15:00–15:20',self,`
+沈知夏 · 消息｜会想你，也怕忙时只剩我猜。我的工作七月可能开始，不能每天随时在线。你能给的量是什么？
+叶澄 · 消息｜项目条件还在核。预计每周一次二十分钟，第二次需要看到排班再问；提前知道变化就讲，不保证所有忙都能提前知道。
+沈知夏 · 消息｜收到。原始素材不是信任押金，我不索要；也不替你答应或拒绝项目。
+叶澄 · 消息｜愿意按这份期待继续谈。等三十号日程确定，再分别答一个真的时段。
+旁白｜她的消息没有一段像片尾字幕一样漂亮。我反而慢下来，看见自己想听的，其实就是她真正能给什么。
+  `,'y10_job',{flags:{y10CareerRespected:true,y10CurrentResponseKept:true}});
+  add('y10_future_trial','一段有限的时间，也由两个人给','dorm','六月二十五日 · 15:00–15:20',self,`
+沈知夏 · 消息｜我愿意继续谈，但现在不敢说很稳定。先问一个十分钟，做过以后再看，不把一份表安排到年底。
+叶澄 · 消息｜愿意有限试行。也希望你自己的生活有位置，联系不是你一直等我剪辑结束才可以睡。
+沈知夏 · 消息｜知道。工作是你自己的条件，素材也不交给我审查全部。
+旁白｜我们给这份不确定留着名字。已有女朋友没有因此被撤回，尚未约会的方向也没有被这条消息直接改成恋人。
+  `,'y10_job',{flags:{y10CareerRespected:true,y10CurrentResponseKept:true}});
+  add('y10_future_control','她拒绝交出决定权','dorm','六月二十五日 · 15:00–15:20',self,`
+沈知夏 · 消息｜不接外地项目可以吗？全部原始素材也给我看，才知道以后不会又漏掉什么。
+叶澄 · 消息｜不接受这个要求。你可以讲怕和想念，不能用它们替我拒绝一份工作，或要求看与他人约定过用途的全部素材。
+叶澄 · 消息｜我做错的那部分自己负责。把判断权交给你，不是不会再犯错的方法。今天的私人期待先停在这里。
+旁白｜她没有因告别展快到就同意，也没有从工作群消失。这个拒绝要听见，后来做完影片也不替这句话变成愿意。
+  `,'y10_job',{flags:{y10CareerRespected:false,y10CurrentResponseKept:false}});
+  add('y10_job','自己的岗位，自己读过再回信','dorm','六月二十六日 · 09:00',self,`
+旁白｜编辑回复两份样本，问我愿不愿将原九月到岗改成七月提前开始，邀请我七月一日起做出版社初级编辑。岗位范围、到岗时间和待遇说明都随邮件发来，我逐项读过，问清试用期的实际工作。
+沈知夏 · 邮件｜条件已经确认，愿意七月一日按约到岗。样本后续修改由我承担，不让书店伙伴代我交。
+旁白｜对方确认收到。我把新的通勤时间记下，发现从宿舍去新住处的公交路线还需要自己试一次。
+旁白｜开始工作尚在未来。今天得到并接受岗位，不等于已经完成第一个工作日；一份可走的生活，也不用等某段关系给最后答案才开始。
+  `,'y10_public_choice',{flags:{y10ShenOfferAccepted:true,y10ShenOfferAcceptedAt:'6-26 09:00',y10ShenJobStartDate:'7-01'}});
+  add('y10_public_choice','选择三 · 真正能给告别展看的版本','bookshop','六月二十六日 · 10:00',ye,'旁白｜旧目录与候选已经核过。现在需要另问这次现场的放映用途，不能拿内部候选的回执代替。两种版本都不含维修片段、私人十秒或共同照片。',null,{choices:[
+    {text:'采用原环境空镜与黑画面，逐项取得这次现场放映答复。',flags:{y10FilmChoice:'environment'},next:'y10_public_environment'},
+    {text:'采用叶澄自己的物件分镜，静音呈现，逐项取得现场放映答复。',flags:{y10FilmChoice:'objects'},next:'y10_public_objects'}
+  ]});
+  add('y10_public_environment','窗、柜台与切黑，各有明确来源','bookshop','六月二十六日 · 10:00–10:20',ye,`
+旁白｜叶澄先核原目录。以前没拍的空镜不补成已经拍过，今天另外问新空场素材与这次现场用途。
+叶澄｜想在十点零五到十点十五拍空桌书架与单纯环境声，四分钟结尾切黑，不拍人、不录私话，不写谁终于释怀。
+林岚｜同意今天这一段空场拍摄，也确认二十七号十五点十分至十五点十四店内现场一次的用途。不准网上发布，之后要用再问。
+旁白｜陈序宁核清场所条件，其他人先离开画面，叶澄才开机。十点十五收机，今天新环境素材真正拍完，不将它写成七章早已拍过的版本。
+旁白｜叶澄本人确认作者范围，陆遥没被要求为没用的私话再答一次。这次作品不含她和林姨那段维修说明声音，原私人素材也不导入。
+叶澄｜范围与回执逐项列在这一版里，不能随手换成别的版本。原私人权限不扩大。
+  `,'y10_projection',{flags:{y10NewEnvironmentRecorded:true,y10NewEnvironmentRecordedAt:'6-26 10:05-10:15',y10FilmMinutes:4,y10FilmSource:'newApprovedEnvironmentOnly',y10FilmPublicApproved:true,y10FilmOnlineApproved:false,y10FilmApprovalScope:'6-27 onsite once 15:10-15:14'}});
+  add('y10_public_objects','自己画的杯子，也能和大家告别','bookshop','六月二十六日 · 10:00–10:20',ye,`
+旁白｜叶澄拿出自己的新物件分镜：杯子、柜台空轮廓、书脊与翻页动作的手绘线，没有借谁的照片把他们画进来。
+叶澄｜四分钟静音版，结尾一整块黑画面。作者是我，这次只答应二十七号十五点十分至十五点十四店内现场一次，不上网。
+林岚｜场所识别范围我确认这一版。先让这里成为大家来过的地方，不替谁说已经舍得走。
+旁白｜陈序宁核活动用途与回执。叶澄将以前待核的分镜和今天真正交出的新版本分别标日期，不把候选阶段倒写成当时已经获准公映。
+沈知夏｜杯子还是有一点歪。
+叶澄｜这次决定留着。让它在这间店里有一只真的用过的杯子的样子。
+  `,'y10_projection',{flags:{y10FilmMinutes:4,y10FilmSource:'yeOriginalObjectsSilent',y10FilmPublicApproved:true,y10FilmOnlineApproved:false,y10FilmApprovalScope:'6-27 onsite once 15:10-15:14'}});
+  add('y10_projection','新的干燥设备，不替旧湿线复活','bookshop','六月二十六日 · 11:00',pair('chen_xuning'),`
+旁白｜陈序宁与场地方技术人员核另一套干燥投影设备、供电点和动线。雨夜停用的湿线与原设备仍留在隔离栏，不将修窗等同电器可以直接开机。
+陈序宁｜新借这套检查通过，现场由技术人员操作，你们不用签一份自己不能负责的安全单。四分钟版本先做一次空场试播，观众不在场。
+旁白｜试播完成，声画与亮度按所选版本核清。屏幕亮了四分钟，结束后没有将试播写成已经举办告别展。
+陈序宁｜二十八号十一点归还这套借用设备，使用人和现场负责人各自确认。四本受潮册继续隔离，不混进可领册子。
+  `,'y10_master',{flags:{y10NewProjectionKitChecked:true,y10ProjectionTestKept:true,y10DamagedCopiesExcluded:true,y10QuarantinedCopies:4,y10UsableCopiesReady:true,y10EquipmentReturnBooked:true,y10ExhibitHeld:false,y10FilmScreened:false}});
+  add('y10_master','最后一份母版，真正交给现场','bookshop','六月二十六日 · 16:10',ye,`
+旁白｜叶澄导出已核范围的四分钟母版，交给陈序宁的现场播放设备，收交件回执。文件仅这次现场使用，不上传社交账号，没有添加私人片段。
+叶澄｜我自己的片子交好了。二十八号活动文件从借用播放机删除，设备归还；我保留自己的获准环境或手绘源文件，不宣称世界上所有副本都删光。
+沈知夏｜那段维修说明以前拍过、曾否越界也仍在真实记录里。这次交件不是要求陆遥补一句已经原谅。
+叶澄｜知道。作品可以完成，我也还有要继续练习的事。
+  `,'y10_business',{flags:{y10MasterDelivered:true,y10MasterDeliveredAt:'6-26 16:10',y10PublicUploadOccurred:false}});
+  add('y10_business','她自己核条件，自己按时答复','bookshop','六月二十六日 · 16:30',ye,`
+旁白｜项目方发来四周影像助理合同。七月八日至八月四日，工时、休息、外地交通与住宿承担方、八千元项目报酬都写清；付款日期另按合同，不记成今天已经结清。
+叶澄｜我问清原始素材交接只在项目范围，也确认告别片和私人照片不会随项目交出。条件可以接受，今天由我自己回信。
+旁白｜她实际发送接受邮件，项目方确认收到，十七点期限履行。知夏的赞成或拒绝没有代替她按下发送键。
+叶澄｜七月八号再真正到现场。现在不是已经出发，也没用这份工作证明我能替任何人解释生活。
+沈知夏｜收到。你的日期与你自己核过的条件，我都听见了。
+  `,'y10_lu_boxes',{flags:{y10ProjectAccepted:true,y10BusinessDecisionByYe:true,y10ProjectReplySentAt:'6-26 16:30',y10ProjectStartDate:'7-08',y10ProjectEndDate:'8-04',y10ProjectWeeks:4,y10ProjectFee:8000,y10ProjectFeePaid:false,y10ProjectCancelled:false}});
+  add('y10_lu_boxes','两箱行李，不需要等电影来配乐','dorm','六月二十六日 · 17:00',pair('lu_yao'),`
+旁白｜我按原约和陆遥搬完两箱到新住处寄存点，核收件人和标号。箱子六下面的线还是很显眼，终于没有被倒过来算成九。
+陆遥｜灯先不放里面，我想自己拿过去试。照片看起来很好，真的照到书桌才知道。
+沈知夏｜好。今天真的搬完两箱，二十八号剩余东西与晚饭照旧。
+陆遥｜你自己新公交线也试试。别忙到第一天去出版社，坐上一辆送我去车站的车。
+旁白｜我笑着答知道。朋友并没有变成片尾需要出现的名单，她那盏还没买的灯，也能有一份不用给作品服务的期待。
+  `,'y10_private_ready_gate',{flags:{y10LuBoxesMoved:true,y10LuBoxesMovedAt:'6-26 17:00'}});
+  gate('y10_private_ready_gate','y10PriorReady',{true:'y10_private_current_gate',false:'y10_private_closed'});
+  gate('y10_private_current_gate','y10CurrentResponseKept',{true:'y10_private_status_gate',false:'y10_private_closed'});
+  gate('y10_private_status_gate','y10EntryStatus',{girlfriends:'y10_private_couple',tryingDates:'y10_private_talk',gettingToKnow:'y10_private_talk',needsConversation:'y10_private_talk'});
+  add('y10_private_couple','女朋友晚上的时间，再自己问一次','dorm','六月二十六日 · 20:00',self,`
+叶澄 · 消息｜明天活动以后想见你，愿意到时候再问晚饭或散步吗？原女朋友保留，今天没有替你填出一定到我家。
+沈知夏 · 消息｜愿意，明天各做完自己的现场岗位以后再说。晚饭、进去和留下也分别问。
+旁白｜她回好。我把自己的通勤路线和明天的岗位写在前面，没有为了想见就把整天交给等待。
+  `,'y10_role_choice',{flags:{y10PrivateMode:'couple',y10PrivateInviteAgreed:true,y10ExclusiveActive:true}});
+  add('y10_private_talk','新的私人谈话，不先承担恋人称呼','dorm','六月二十六日 · 20:00',self,`
+叶澄 · 消息｜明天活动后有十五分钟，想问你愿不愿意只谈谈各自这几天。原约会或了解保留，原暂停修复者这次也只到再谈。
+沈知夏 · 消息｜愿意听。十八点半到十八点四十五，想休息会直接讲，不加身体接触或住处邀请。
+旁白｜她答应这份量。未来正式怎样继续留三十号分别回答，今天不借有限谈话先开始一场她没有同意的约会。
+  `,'y10_role_choice',{flags:{y10PrivateMode:'talk',y10PrivateInviteAgreed:true,y10ExclusiveActive:false}});
+  add('y10_private_closed','现在未获准，就不安排她来等','dorm','六月二十六日 · 20:00',self,`
+叶澄 · 工作消息｜明天岗位照现场表。私人问题还没有收到能继续的回应，这次不新增活动后的约会。
+沈知夏 · 消息｜收到。不去知道你会经过的地方等，不拿工作完成要求你今天答喜欢。
+旁白｜没有新私人邀约，就没有一场待取消的等待。我们仍可以把各自答应过的现场工作做完，过去的相处也仍是真实的。
+  `,'y10_role_choice',{flags:{y10PrivateMode:'closed',y10PrivateInviteAgreed:false,y10ExclusiveActive:false}});
+
+  add('y10_role_choice','选择四 · 告别展里自己承担的岗位','farewell_exhibit','六月二十七日 · 13:30',pair('chen_xuning'),'旁白｜到场核过干燥通道、四本隔离和可领数量。今天只接自己能完成的一班，不把叶澄的新设备操作揽成证明喜欢的工作。',null,{choices:[
+    {text:'负责十四点至十四点五十的入口与领册登记，按数量交班。',flags:{y10RoleChoice:'door'},next:'y10_role_door'},
+    {text:'负责十四点至十四点五十的书桌与归还登记，按清单交班。',flags:{y10RoleChoice:'stock'},next:'y10_role_stock'}
+  ]});
+  add('y10_role_door','门口的五十分钟，给每个人一个入口','farewell_exhibit','六月二十七日 · 14:00–14:50',pair('lin_wan'),`
+旁白｜我在入口核领册数量，把只余可用册的说明写清。原印数不改，四本隔离没有被填作已经领走，林晚按自己答应的另一班接手。
+林晚｜这个门总有人说不好找。今天你可以先告诉大家往里面走，不用顺便解释他们会不会舍得。
+沈知夏｜好。真正来的人自己决定留多久。
+旁白｜一位熟客没有领册，只在柜台摸了摸以前常坐的位置。五十分钟结束，我把已领、剩余和未动的受潮栏分别交清。
+  `,'y10_exhibit',{flags:{y10RoleKept:true,y10RoleKeptTime:'6-27 14:00-14:50'}});
+  add('y10_role_stock','归还也有位置，不急着给每本书定结尾','farewell_exhibit','六月二十七日 · 14:00–14:50',pair('xu_jianwei'),`
+旁白｜我在书桌核归还登记，不把读者夹在书里的私人字条随手贴上墙。见微帮另一位读者核旧修书编号，各自接自己的量。
+许见微｜有人只想把书还回来，不一定想公开说为什么一直留着。
+沈知夏｜知道。登记借阅与归还，里面的话还给写的人。
+旁白｜一册书脊上的胶带老了，却还结实。十四点五十我交清这轮登记，纸页与过去都不用因今天结束就被改成整齐的新故事。
+  `,'y10_exhibit',{flags:{y10RoleKept:true,y10RoleKeptTime:'6-27 14:00-14:50'}});
+  add('y10_exhibit','Y10-02 · 来过的人，不只在片尾名单里','farewell_exhibit','六月二十七日 · 15:00',pair('zhou_zhi'),`
+旁白｜林岚按原活动单说完自己的告别，没有承诺以后每周回来值班。林晚收好读者愿意归还的书，见微把旧修书清单交给它们的新保管人。
+周栀｜这段我想自己讲。总说以后再来，所以有时忘记当时坐在这里也是真的。
+沈知夏｜你现在来了。
+周栀｜对，今天来了。以后去哪里也自己走，不让一间书店替所有人把路留好。
+旁白｜她笑了一下，向陆遥让出通道。朋友们各有要说的话，也各有不愿公开的部分；那盆差一点搬错的植物，被林姨自己选好新位置。
+  `,'y10_screening');
+  add('y10_screening','四分钟，完成的是这一版作品','farewell_exhibit','六月二十七日 · 15:10–15:14',ye,`
+旁白｜技术人员按核过的版本播放。环境版有获准的场所与环境声，物件版安静地走过她自己的线；没有维修私话、旧私人十秒或共同照片。
+旁白｜黑画面出现时，屋里有人还拿着没喝完的茶。它没有替谁宣布全部释怀，四分钟结束，灯回到每个人自己坐的位置。
+陆遥｜看见那只特别难洗的杯子了。
+叶澄｜就是它。我想过把它做得更好看一点，后来还是留下了原来的歪。
+旁白｜陆遥点头，没有被要求评价叶澄是否已经值得原谅。一次现场放映真正完成，未获准的其他用途仍不扩大。
+  `,'y10_exhibit_wrap',{flags:{y10FilmScreened:true,y10FilmScreenedAt:'6-27 15:10-15:14',y10ExhibitHeld:true}});
+  add('y10_exhibit_wrap','散场，椅子与自己的时间也都归位','farewell_exhibit','六月二十七日 · 17:30',pair('lin_lan'),`
+旁白｜读者散去，现场剩余册与归还件清点完。四本受潮册继续隔离，替换报价仍没下单；没有为了给今天补成没有损失，偷偷加一笔别人未确认的钱。
+林岚｜今天我说完了，也真的累。十九点半照旧休息，今晚最后一张椅子可以让它先待着，不再开一个通宵。
+旁白｜陈序宁封好借用播放机，明早十一点删除这次活动文件并归还；该还给作者的原件按清单安排，不将公共展览权限变成永久保管。
+叶澄｜谢谢各自这一班。我自己的母版按原源文件范围保留，这次没有开放新的网上放映。
+旁白｜我把笔还到杯里。每个人都可以从这间店走回自己的晚上，不需要一起留下才算认真告别过。
+  `,'y10_night_gate',{flags:{y10ExhibitWrapKept:true,y10OriginalsReturnArranged:true}});
+  gate('y10_night_gate','y10PrivateMode',{couple:'y10_night_couple',talk:'y10_night_talk',closed:'y10_night_closed'});
+  add('y10_night_couple','选择五 · 放映以外，今晚想怎样相处','old_street','六月二十七日 · 17:40',ye,'旁白｜她把相机留在工作架上，问今天想怎样过。晚饭、到住处与留宿仍分别答，不把女朋友的称呼变成默认进门。',null,{choices:[
+    {text:'另问去她住处吃晚饭，也想留下；到时各自再确认愿意。',flags:{y10NightChoice:'stay'},next:'y10_home_invite'},
+    {text:'另问只到她住处吃晚饭，今晚各自回去，不留宿。',flags:{y10NightChoice:'dinner'},next:'y10_home_invite'},
+    {text:'今晚各自休息，另问明早九点十分钟电话，不去住处。',flags:{y10NightChoice:'rest'},next:'y10_couple_rest'}
+  ]});
+  add('y10_home_invite','先答应晚饭与进门','old_street','六月二十七日 · 17:40',ye,`
+沈知夏｜今晚想去你那里吃饭，可以吗？先问晚饭和进去，不把留下当成已经答应。
+叶澄｜愿意请你来吃饭，你也愿意到家里吗？
+旁白｜我答愿意。她说橡皮已经找回一块，却没找到那个总被画歪的杯子；我们讨论汤要不要放番茄，谈话终于不都像在给一场电影写说明。
+旁白｜她没带相机，我也没有拍她走回家的路。我们按新的邀请向住处走，晚饭以后留不留仍在后面的回答里。
+  `,'y10_home_dinner',{flags:{y10HomeInviteAgreed:true}});
+  add('y10_home_dinner','杯子不在镜头里，在桌上','ye_home','六月二十七日 · 18:30–19:30',ye,`
+旁白｜进门前她再问我愿意吗，我说愿意，才将伞收在门边。真的杯子在书下面，谁也没有先为找到它拍一张胜利的照片。
+叶澄｜我想用小锅，结果两个人好像不太够。
+沈知夏｜可以分两次。今天不用把一顿饭也剪成动作很顺的一版。
+旁白｜第一锅番茄汤有一点酸，第二次她少放一块。我们吃完，轮流讲今天听见读者怎样叫那间书店，没有替别人的名字下结论。
+叶澄｜我今天有一段黑画面没着急补。以为会一直觉得少了，后来觉得大家坐在那里也很好。
+沈知夏｜我今天没帮你改最后那块。也觉得自己可以在这里，只是来吃饭。
+旁白｜十九点三十，我们收好碗。她读到林姨已关手机休息的消息，我也让自己不用再查一轮现场表。
+  `,'y10_stay_gate',{flags:{y10HomeEntered:true,y10PrivateMeetingKept:true,y10DinnerKept:true,y10OwnerRestKept:true,y10OwnerRestAt:'6-27 19:30'}});
+  gate('y10_stay_gate','y10NightChoice',{stay:'y10_stay_agree',dinner:'y10_dinner_part'});
+  add('y10_stay_agree','留下与靠近，在新的愿意以后','ye_home','六月二十七日 · 21:00',ye,`
+沈知夏｜今晚想留下，你愿意吗？如果累了，只一起休息也可以。
+叶澄｜愿意。我也想你留下，不是为了今天做完作品应该奖励自己。你现在还愿意吗？
+旁白｜我答愿意。她拿出一床干净被子，又问能不能抱我，我说可以，才靠进她伸过来的手臂。
+沈知夏｜也想吻你，愿意吗？
+叶澄｜愿意。慢一点，有需要停的直接说。
+旁白｜我们在愿意的亲吻和拥抱里停了一会儿。灯暗下来，今晚不留下照片和录音；之后的私密时光淡出，第二天还要认真问睡得怎样。
+  `,'y10_overnight',{flags:{y10StayAgreed:true,y10Kissed:true,y10TouchAgreed:true,y10IntimateFadeAgreed:true}});
+  add('y10_overnight','一夜真正过去，才写留下','ye_home_morning','六月二十八日 · 07:40',ye,`
+旁白｜一夜真正过去。我醒来时她正在找袜子，找到的却是那块上周找过的橡皮，像住处还在按自己的方式返还丢掉的东西。
+叶澄｜睡得怎样？昨晚有什么现在想再说的吗？
+沈知夏｜睡得好。想说你半夜将被子让过来，自己又缩了一下，以后可以叫我一起调整，不用只让。
+叶澄｜知道，下次我也说自己冷。
+旁白｜她答完，我才笑起来。身体的靠近没有使这些普通需要自动变得好猜，今早仍能各自直接讲。
+  `,'y10_breakfast',{flags:{y10StayedOvernight:true,y10StayedOvernightAt:'6-28 07:40'}});
+  add('y10_breakfast','早餐，先听今天的自己','ye_home_morning','六月二十八日 · 08:00–08:40',ye,`
+旁白｜我们分两份早餐，桌上只有一杯汤，我问能不能先多拿一点，叶澄说可以，也说自己想留下最后半碗。
+沈知夏｜收到，半碗是你的。不需要我再从画面里猜你喜欢多少。
+叶澄｜也不用现在给早饭起名字。
+旁白｜我笑着把杯子推回她手边。八点四十离开，我们各去准备十一点装箱和设备归还；没有将过夜写成今天全部时间也一起安排。
+  `,'y10_packing',{flags:{y10BreakfastKept:true,y10BreakfastKeptAt:'6-28 08:00-08:40'}});
+  add('y10_dinner_part','只到晚饭，认真说晚安','old_street','六月二十七日 · 20:00',ye,`
+旁白｜按新的邀请只吃晚饭，没有留宿。她送我到街口，我们都说今天想各自休息，没有因不留下把原女朋友撤掉。
+沈知夏｜明早九点有十分钟，可以只讲早餐和普通的事吗？不是让你再看材料。
+叶澄｜愿意，九点到九点十分。我也想讲今天没找回的袜子。
+旁白｜我答好，各自离开。送到街口不是还需要用一个吻结束的规定，我们没有新的身体接触。
+  `,'y10_couple_phone',{flags:{y10DinnerOnlyKept:true,y10MorningCallBooked:true}});
+  add('y10_couple_rest','休息，也有完整的一句愿意','old_street','六月二十七日 · 17:40',ye,`
+沈知夏｜今天先各自回去，明早九点能听你讲十分钟普通的事吗？今晚不去你住处。
+叶澄｜愿意，九点到九点十分。想见也能和想先睡一觉同时存在，今天不用选择哪一句才是真的。
+旁白｜我答好，我们没有进门、晚饭或过夜。她走回自己的路，我去给自己买饭，也给那份新通勤路线留一点时间。
+  `,'y10_couple_phone',{flags:{y10RestChoiceKept:true,y10MorningCallBooked:true}});
+  add('y10_couple_phone','原九点电话，真正用来讲早餐','dorm','六月二十八日 · 09:00–09:10',self,`
+旁白｜九点，电话按昨晚实际答应的时段接通。她讲袜子找到了，我讲昨晚买的饭盒今天还想留着装新钥匙。
+叶澄 · 电话｜不是物件必须适合入镜才值得留下。
+沈知夏 · 电话｜也不是你都能拍得很好，我才想知道你今天吃什么。
+旁白｜我们笑了一会儿，九点十分准时结束。没有早餐同桌就不补一份同桌，未留宿也有这段真正说过的私人话。
+旁白｜林姨今早才回群里的工作消息，昨晚十九点半已经按原约休息；不是今天通话结束，我们才允许她睡觉。
+  `,'y10_packing',{flags:{y10MorningCallKept:true,y10MorningCallKeptAt:'6-28 09:00-09:10',y10OwnerRestKept:true,y10OwnerRestAt:'6-27 19:30'}});
+  add('y10_night_talk','选择五 · 十五分钟，也可以明确不去','old_street','六月二十七日 · 17:40',ye,'旁白｜按昨天答应的范围，十八点半到十八点四十五只私人谈话。没有身体接触、住处或恋人称呼，想休息要把刚约的时段明确撤回。',null,{choices:[
+    {text:'按新约散步十五分钟，讲今天的普通小事，不增加接触。',flags:{y10NightChoice:'walk'},next:'y10_talk_walk'},
+    {text:'按新约坐十五分钟，讲各自开始工作的期待，不增加接触。',flags:{y10NightChoice:'talk'},next:'y10_talk_work'},
+    {text:'实际说明今晚先休息，共同撤回这次十五分钟，下一次另问。',flags:{y10NightChoice:'rest'},next:'y10_talk_rest'}
+  ]});
+  add('y10_talk_walk','十五分钟的路，先走在今天','riverside','六月二十七日 · 18:30–18:45',ye,`
+旁白｜我们按新约到河边，她不带相机，问我今天真的喜欢哪一点。我讲熟客只摸柜台、没有领册，叶澄讲有人等黑画面结束才喝一口茶。
+沈知夏｜一度想替他们找一个很像告别的句子。后来不知道怎么说，就让它只是他们来过。
+叶澄｜我也想练习不知道怎么总结的时候，先问而不是替他们答。
+旁白｜十八点四十五实际结束，各自离开。原约会或了解保留，原暂停修复者仍仅再谈，没有牵手或住处邀请。
+  `,'y10_talk_morning',{flags:{y10PrivateMeetingKept:true,y10PrivateTalkMinutes:15,y10MorningWorkMessageBooked:true}});
+  add('y10_talk_work','她的项目，与我的第一条公交线','riverside','六月二十七日 · 18:30–18:45',ye,`
+沈知夏｜找到去新岗位的公交线了，还有一站要自己走过去试。未来可能会累，不想先说全部一定能做得很好。
+叶澄｜我也要自己看四周现场的交接，不用你先对每份原始素材担保。我们能讲怕，也能给自己一点实际学的时间。
+旁白｜她拿出纸巾擦座位的雨点，没有拍我坐下。十五分钟里没有把工作互相指导，也没有将愿意听变成已经恢复女朋友。
+旁白｜十八点四十五按约结束，明早九点只另约工作位置确认，不延长今晚私人谈话。
+  `,'y10_talk_morning',{flags:{y10PrivateMeetingKept:true,y10PrivateTalkMinutes:15,y10MorningWorkMessageBooked:true}});
+  add('y10_talk_rest','真正撤回这一晚，不虚构雨里的等待','old_street','六月二十七日 · 17:40',ye,`
+沈知夏｜今天先各自休息，十八点半的十五分钟不去了。愿意继续谈的答复保留，之后时间另问。
+叶澄｜收到，今晚约定共同撤回。明早九点只确认装箱位置，私人怎样继续留三十号分别答。
+旁白｜我答知道。她没有去河边等，今晚实际取消的是刚约的谈话，不是由我补出来的一场恋爱。
+  `,'y10_talk_morning',{flags:{y10PrivateMeetingCancelled:true,y10MorningWorkMessageBooked:true}});
+  add('y10_night_closed','选择五 · 自己的今晚，不去她的路径等','dorm','六月二十七日 · 18:00',self,'旁白｜没有活动后私人邀请。现在选的是自己的生活，不是取消一场从未答应过的见面。',null,{choices:[
+    {text:'和陆遥讲她新住处的灯，听朋友自己的期待。',flags:{y10NightChoice:'friend'},next:'y10_closed_self'},
+    {text:'实际试走自己的新公交线路，核上班通勤。',flags:{y10NightChoice:'work'},next:'y10_closed_self'},
+    {text:'自己吃饭和休息，不用一直看工作群等私人答复。',flags:{y10NightChoice:'rest'},next:'y10_closed_self'}
+  ]});
+  add('y10_closed_self','自己的时间也真实做过','dorm','六月二十七日 · 20:00',self,'旁白｜我按自己的选择过完这段时间，没有去叶澄住处、河边或她会经过的路。', 'y10_talk_morning',{
+    ...variation('y10NightChoice',{
+      friend:'旁白｜陆遥自己选了小灯，讲还有一盏颜色好看却照不到书桌。我听完，没有从她愿意讲就替她解释搬家已经不害怕。',
+      work:'旁白｜我自己试过新公交线，记从下车到门口的实际时间。第一天上班不会由叶澄的一部影片替我到场。',
+      rest:'旁白｜我买饭、喝水，停下刷新。难过没有全部解决，身体也能先得到一段真正休息。'
+    })
+  });
+  add('y10_talk_morning','九点工作确认，不补一份早餐同桌','dorm','六月二十八日 · 09:00',self,`
+旁白｜九点群里收到十一点装箱位置与设备归还的实际确认，私人暂停也只收到工作范围。没有未约过的私人电话或一夜。
+旁白｜林姨昨晚十九点半已按原安排关手机休息，今早才回工作消息。现在收到实际回收，不把每次休息都改成大家可以继续叫她帮忙。
+旁白｜我答工作收到，收好自己的那份清单。没有新的私人身体接触，也不需要让这份未发生成为一个故意冷淡的故事。
+  `,'y10_packing',{flags:{y10MorningWorkMessageKept:true,y10OwnerRestKept:true,y10OwnerRestAt:'6-27 19:30'}});
+  add('y10_packing','十一点，装箱和归还都真正完成','empty_bookshop','六月二十八日 · 11:00',pair('chen_xuning'),`
+旁白｜按原安排装箱，书架一格一格空下来。借用播放机的本次活动文件由负责人实际删除，新设备点清归还，双方收回执。
+陈序宁｜收到归还，这台上面的活动文件已经删。叶澄本人手里的获准源文件按原范围留着，不代所有人写一句全部删除。
+旁白｜四本受潮册另箱隔离，可用册与剩余册照真实数量核。原印数和二十四页不变，没有下单的报价仍只是报价。
+旁白｜我把最后两本旧书递给见微，书架露出原来被挡住的一块墙。它不是一直这么空，只是曾经放过很多东西，今天真的装进了箱子。
+  `,'y10_lu_dinner',{flags:{y10PackingKept:true,y10EquipmentReturned:true,y10PlaybackDeviceFileDeleted:true,y10PlaybackDeviceFileDeletedAt:'6-28 11:00'}});
+  add('y10_lu_dinner','朋友晚饭，先讲她自己的下一站','dorm','六月二十八日 · 18:00',pair('lu_yao'),`
+陆遥｜灯拿到手了，亮度比照片诚实一点。新家还没去住，先允许我对它想得很好，也有一点怕。
+沈知夏｜愿意听你都讲。以后有空再看你自己选的样子，不把一段记录当成已经全知道。
+旁白｜我们实际吃完原约晚饭。陆遥问我的第一天通勤，我讲那条真的走过或需要入职前再走一次的路，不请她替我把新生活排好。
+陆遥｜原址关灯以后，也不要把我每一次发早餐照片都算成已经适应。不好吃我会自己骂的。
+旁白｜我笑着答好。今天没聊完的，可以由她下一次决定讲，不需要赶在朋友离开前交一个完美友情结尾。
+  `,'y10_lu_entry',{flags:{y10LuDinnerKept:true}});
+  add('y10_lu_entry','入口、证件与那一条原车次','dorm','六月二十八日 · 20:00',pair('lu_yao'),`
+旁白｜我们按原约核入口、车次、证件与两只随身箱，七点五十出门、九点二十车次照旧。她把小灯装进自己能看到的袋子，不托我用影片保管。
+陆遥｜六不是九，明天也不是这张表写完就自动到了。我会叫你，你也记得起。
+沈知夏｜知道，闹钟我自己设。车站到了也不替你选是否回头。
+旁白｜我们把桌子收好，给明天留一条真的走得过去的路。睡前我没有再翻她新住处的全部商品页，朋友喜欢什么仍由朋友自己选。
+  `,'y10_lu_leave',{flags:{y10LuEntryChecked:true}});
+  add('y10_lu_leave','七点五十，真正推门出发','dorm','六月二十九日 · 07:50',pair('lu_yao'),`
+旁白｜七点五十，我们按原时间带两箱行李出门。陆遥检查证件，我提自己答应的一只箱子，没有请谁替我送朋友或拍一段出门的证明。
+陆遥｜今天真走了，昨天那盏灯也在。还没有住过，但可以先走去看看。
+旁白｜我答好，跟她下楼。走到楼门外，箱轮在接缝上跳一下，那份昨晚写好的计划才开始变成真正走过的路。
+  `,'y10_lu_depart',{flags:{y10LuDepartureStarted:true,y10LuDepartureStartedAt:'6-29 07:50'}});
+  add('y10_lu_depart','九点二十，朋友真正向她的生活去','train_station','六月二十九日 · 09:20',pair('lu_yao'),`
+旁白｜九点二十，陆遥按原车次踏进自己的车厢。我们告别，没有把一段友情变成必须留在临江的承诺。
+陆遥｜到了给消息，不保证第一顿就找到最好吃的早餐。先吃到再说。
+沈知夏｜好。也不要求你每天发，真的想讲再讲。
+旁白｜她笑着挥手。真正出发以后，我才将送站写成完成，不是我知道她要走，就能替她提前走完。
+  `,'y10_lights',{flags:{y10LuDepartureKept:true,y10LuDepartureTime:'6-29 09:20'}});
+  add('y10_lights','Y10-03 · 灯关以后，钥匙也交回去','empty_bookshop','六月三十日 · 10:00',pair('lin_lan'),`
+旁白｜原址最后一次核箱号，四本隔离在单独栏；归还设备回执也在。林姨看过桌上真正留下的那只杯子，决定自己带走。
+林岚｜这间店关门，不是每个人都必须得到同一种答案才可以走。你们做过的事，我记得，自己的以后也各去过。
+旁白｜十点按原安排关灯，门锁好，钥匙交给接收人并收回执。房间不是被一段告别剪空的，是大家真正搬完、走出以后才空下来。
+叶澄｜我没拍你关灯。这个动作先让你自己做，之后想讲也由你自己讲。
+旁白｜林姨点头，我们走出原址。门里没有一盏必须为所有人一直亮着的灯，门外仍各有需要认真走的上午。
+  `,'y10_contact_gate',{flags:{y10LightsOff:true,y10KeysReturned:true,y10ClosureTime:'6-30 10:00'}});
+
+  gate('y10_contact_gate','y10PrivateMode',{couple:'y10_contact_open',talk:'y10_contact_open',closed:'y10_contact_closed'});
+  add('y10_contact_open','选择六 · 未来电话，先让双方真的答应','old_street','六月三十日 · 11:00',ye,'旁白｜岗位与四周项目已经各自确认。现在只问能给的量，继续与结束还会分别答；先约过的电话若后来不继续，要真正共同撤回。',null,{choices:[
+    {text:'按实际能给的量确认联系，具体模式每次都由双方答。',flags:{y10ContactChoice:'confirm'},next:'y10_contact_mode_gate'},
+    {text:'明确先有限试行，只约七月十号十分钟，再实际回看。',flags:{y10ContactChoice:'trial'},next:'y10_contact_trial'}
+  ]});
+  gate('y10_contact_mode_gate','y10FutureChoice',{concrete:'y10_contact_stable',trial:'y10_contact_trial'});
+  add('y10_contact_stable','两次二十分钟，不预填已经打过','old_street','六月三十日 · 11:00',ye,`
+沈知夏｜七月十号、十七号二十点半，各二十分钟可以吗？工作临时变了先讲，再共同答一个新时间。
+叶澄｜这两个时段目前能给，愿意。提前知道变化会通知，不把没答应的其他晚上都算待命。
+旁白｜我也说愿意，双方实际约定十号和十七号原电话。它们在未来，今天不预记通话，不要求交换定位或所有原始素材。
+  `,'y10_final_choice',{flags:{y10CallsBooked:true,y10ContactMode:'stable',y10FirstCallMinutes:20,y10SecondCallBooked:true,y10FirstCallBookedAt:'7-10 20:30',y10SecondCallBookedAt:'7-17 20:30'}});
+  add('y10_contact_trial','先把这一通十分钟给出来','old_street','六月三十日 · 11:00',ye,`
+沈知夏｜先约七月十号二十点半到二十点四十，十分钟。讲过再看下一次，不预排全部四周。
+叶澄｜愿意，这一通我也答应。以后想加新的时段再问，没有答过的十七号不补成一场被取消的等待。
+旁白｜我们实际约好这十分钟。已有女朋友保留称呼，尚未约会者这仍是一份再谈的时间，正式怎样继续接下来各自说。
+  `,'y10_final_choice',{flags:{y10CallsBooked:true,y10ContactMode:'trial',y10FirstCallMinutes:10,y10SecondCallBooked:false,y10FirstCallBookedAt:'7-10 20:30'}});
+  add('y10_contact_closed','选择六 · 没有私人电话的下一份日程','old_street','六月三十日 · 11:00',self,'旁白｜原回应或职业决定权仍未谈妥，叶澄没有答应新的私人电话。选择自己的记录方式，不用知道她排班来偷偷补一份约定。',null,{choices:[
+    {text:'保留必要工作群的有限更新，不借它追问私人时间。',flags:{y10ContactChoice:'work'},next:'y10_contact_none'},
+    {text:'写给自己一张不发送的便签，不要求她替我的以后答复。',flags:{y10ContactChoice:'self'},next:'y10_contact_none'}
+  ]});
+  add('y10_contact_none','没约过的电话，不写成已经撤回','old_street','六月三十日 · 11:00',self,`
+旁白｜我按自己的记录方式整理日程，必要工作事项收到，私人没有新时间。今天没有一份七月电话需要她替我取消。
+旁白｜过去愿意谈过的十分钟、可能有过的照片和一夜各自保留，未来没有新的答应，也不将它们删成当时从未认真。
+  `,'y10_final_choice',{flags:{y10ContactMode:'none',y10SecondCallBooked:false,y10FirstCallMinutes:0}});
+  add('y10_final_choice','选择七 · 两个人自己给最后的答复','old_street','六月三十日 · 11:20',self,'旁白｜作品与活动已经完成，彼此仍有自己的需要。关系如何继续，由真实回应和两个人的愿意决定，不由留宿、影片形式或帮过多少决定。',null,{choices:[
+    {text:'说愿意继续，也听她自己的回答；不给彼此写必须圆满的结尾。',flags:{y10FinalChoice:'continue'},next:'y10_final_ready_gate'},
+    {text:'明确结束私人发展，认真告别，让各自工作与生活继续。',flags:{y10FinalChoice:'end'},next:'y10_farewell'}
+  ]});
+  gate('y10_final_ready_gate','y10PriorReady',{true:'y10_final_current_gate',false:'y10_farewell'});
+  gate('y10_final_current_gate','y10CurrentResponseKept',{true:'y10_final_status_gate',false:'y10_farewell'});
+  gate('y10_final_status_gate','y10EntryStatus',{girlfriends:'y10_final_contact_gate',tryingDates:'y10_ne_dates',gettingToKnow:'y10_ne_new',needsConversation:'y10_ne_new'});
+  gate('y10_final_contact_gate','y10ContactMode',{stable:'y10_he',trial:'y10_ne_couple'});
+  add('y10_he','HE答复 · 先愿意一起生活，再决定怎样记录','old_street','六月三十日 · 11:20',ye,`
+沈知夏｜愿意继续做你的女朋友。想念和不舒服都想直接讲，不让你先拍一份能证明我的情绪才可以听见。
+叶澄｜我也愿意作为女朋友继续。作品能留下，但不替你回答想怎样过；两次原电话保留，变化也给你真的新选择。
+旁白｜双方亲口答完，我们没有将她做过的错剪掉，也没有替陆遥或林姨宣布已经原谅。能继续，是这两个人自己的回答。
+叶澄｜秋天想去河边。先核有空的下班时段，不带相机也想来见你。
+旁白｜我笑着答想去，具体时间等真正问过才定。这个夏天的结尾，不需要连每一份未来都已经拍好。
+  `,'y10_july_job',{flags:{y10Outcome:'he',relationshipStatus:'girlfriends',y10ExclusiveActive:true,y10NewDatesStarted:false,y10RelationshipPublic:false}});
+  add('y10_ne_couple','NE答复 · 女朋友也能有限试行','old_street','六月三十日 · 11:20',ye,`
+沈知夏｜愿意继续，也只能先给这一份实际的量。我们仍是女朋友，不想把有限试行解释成你不够喜欢。
+叶澄｜我也愿意继续做女朋友，称呼和排他保留，先试这一通十分钟。以后真正能给多少再问，没答应的时段不等。
+旁白｜我们给不确定留了位置，没有把它剪成缺点。新的联系要真实做到，亲近的过去也不替以后全部安排盖章。
+  `,'y10_july_job',{flags:{y10Outcome:'ne',relationshipStatus:'girlfriends',y10ExclusiveActive:true,y10NewDatesStarted:false,y10RelationshipPublic:false}});
+  add('y10_ne_dates','NE答复 · 原约会继续，不再起算一次','old_street','六月三十日 · 11:20',ye,`
+沈知夏｜愿意继续原约会，这份能给的联系量也亲口答过。今天还不确认女朋友，你愿意继续这个范围吗？
+叶澄｜愿意继续原约会。旧开始按真实保留，不因一章收束就又换一天，也不要求你给我们一个更像结局的称呼。
+旁白｜我们分别听完，两个人的约会有下一段实际时间，未确认女朋友或排他。新的靠近仍要问，今晚也不借告别补一个吻。
+  `,'y10_july_job',{flags:{y10Outcome:'ne',relationshipStatus:'tryingDates',y10ExclusiveActive:false,y10NewDatesStarted:false,y10RelationshipPublic:false}});
+  add('y10_ne_new','NE答复 · 新约会，从双方真的答应开始','old_street','六月三十日 · 11:20',ye,`
+沈知夏｜今天愿意从这次开始试着约会，不将以前仅了解或暂停后的再谈改成早已恋爱。你现在也愿意吗？
+叶澄｜愿意，从今天双方这份回答开始约会。还没有确认女朋友，原暂停和了解保留，联系按刚才真正答应的量来。
+旁白｜我答愿意，两个人的新开始才写下时间。原见面不被抹掉，没获准的过去也不被这句新话补出来。
+  `,'y10_july_job',{flags:{y10Outcome:'ne',relationshipStatus:'tryingDates',y10ExclusiveActive:false,y10NewDatesStarted:true,y10NewDatesStartedAt:'6-30 11:20',y10RelationshipPublic:false}});
+  add('y10_farewell','离别答复 · 不把一段缺口推给下一帧','old_street','六月三十日 · 11:20',self,`
+沈知夏｜我说的是现在自己的意愿，也听你自己的。继续不了的部分，不用因为今天交钥匙就再给一份勉强的承诺。
+叶澄 · 消息｜知道。旧回应或现在的需要没能谈妥，或你想结束，我都不答一个假的继续。私人发展到这里告别，工作按原范围。
+旁白｜我们真正告别。以前相处、可能的靠近和今天的作品保留，不将一段关系结束改成从未喜欢，也不以今天有新岗位就要求难过立刻结束。
+旁白｜原电话如果刚才真正约过，需要接下来亲口撤回；未约过就不虚构她等过我，或者我替她取消了什么。
+  `,'y10_cancel_gate',{flags:{y10Outcome:'farewell',relationshipStatus:'notDating',y10ExclusiveActive:false,y10NewDatesStarted:false,y10RelationshipPublic:false}});
+  gate('y10_cancel_gate','y10CallsBooked',{true:'y10_cancel_calls',false:'y10_no_calls'});
+  add('y10_cancel_calls','约过以后，告别时真正共同撤回','old_street','六月三十日 · 11:30',self,`
+沈知夏 · 消息｜刚才真正约的七月电话，现在随私人结束明确撤回。十号，以及若刚才也答应了的十七号，都不去等一个已告别的答案。
+叶澄 · 消息｜同意共同撤回刚约的时段。约过的事实保留，也把现在取消的答复记清，不留一个看似随时会继续的约定。
+旁白｜我答收到。实际撤回的是刚才答应的那一通或两通，没约过的其他夜晚仍不被添成等待。
+  `,'y10_july_job',{flags:{y10CallsCancelled:true,y10CallsCancelledAt:'6-30 11:30'}});
+  add('y10_no_calls','本来没有新电话，告别也不补取消','old_street','六月三十日 · 11:30',self,'旁白｜没有获准的私人电话就没有一份待撤回的七月表。工作更新只按必要事项，双方私人告别真正说完，以后不借这些更新追问她何时有空。','y10_july_job');
+
+  add('y10_july_job','Y10-04 · 七月一日，自己的第一天','dorm','七月一日 · 下班后的回收',self,`
+旁白｜下班回到住处，我回看今天早上九点按本人确认的岗位真正到出版社报到，核自己的工位、培训和第一份通读清单。工作地点有新的桌子，不是原来见微替我指导的那张。
+旁白｜接待同事指给我通勤入口，我把实际走过的一站记在纸角。初级编辑不是得到邀请就已经会做全部，今天先完成这一轮培训。
+沈知夏｜这份校样我先自己通读，遇到不清楚的按岗位流程问，不将朋友都拉进我的修改。
+旁白｜到了午饭时我买错一盒太辣的饭，照样吃完一点，也给明天留一个可以改的小事。私人未来怎样答过，都没有代我开始自己的岗位。
+  `,'y10_project_depart',{flags:{y10ShenJobStarted:true,y10ShenJobStartedAt:'7-01',y10ShenFirstTrainingKept:true}});
+  add('y10_project_depart','七月八日，她真正去做自己的项目','old_street','七月八日 · 工作消息',self,`
+叶澄 · 工作消息｜按本人接受的条件到四周项目现场，交接完成，今天真正开始影像助理工作。原告别片和私人记录没有带入项目素材。
+旁白｜我收到这一份实际更新。只告别的方向也只有工作消息，不从她愿意讲到场就推一场私人约会已经回来。
+旁白｜交通与住宿按已确认合同由项目方承担，报酬仍按付款约定处理，不写今天已经全结清。她的四周从今天真实到场开始，不从我看见询问就提前完成。
+  `,'y10_july_contact_gate',{flags:{y10ProjectStarted:true,y10ProjectDepartureKept:true,y10ProjectStartedAt:'7-08',y10ProjectPrivateMaterialTransferred:false}});
+  gate('y10_july_contact_gate','y10Outcome',{he:'y10_first_call',ne:'y10_first_call',farewell:'y10_july_alone'});
+  add('y10_first_call','十号那一通，真正讲到饭和新路','dorm','七月十日 · 20:30',self,`
+旁白｜二十点半，我们按三十号真正答应的时段通话。稳定方向二十分钟，有限试行十分钟，没人因聊得好就把结束时间偷偷延后。
+沈知夏 · 电话｜第一天买错一盒辣的饭，第二天终于买对。今天自己读到一处错误，也发现以前总等别人肯定才敢划线。
+叶澄 · 电话｜我今天跟完一轮交接，发现讲清自己现在还不懂，比先装成什么都拍得很好更省事。
+旁白｜我们按实际量讲完彼此，结束时间到了各自说晚安。通话不是工作汇报或索要素材的审查，下一次的忙也不会被这一晚全部保证。
+  `,'y10_second_gate',{flags:{y10FirstCallKept:true,y10FirstCallKeptAt:'7-10 20:30'}});
+  gate('y10_second_gate','y10SecondCallBooked',{true:'y10_second_change',false:'y10_trial_review'});
+  add('y10_second_change','十七号，先通知，才真正改约','dorm','七月十七日 · 18:00',self,`
+叶澄 · 消息｜现场收尾会延到原二十点半附近。提前一百五十分钟告诉你，想将原二十分钟改到二十一点到二十一点二十，你那边可以吗？
+沈知夏 · 消息｜可以，我也核过自己的通读量，愿意改到新时段。不需要我一直等你结束再猜什么时候接通。
+旁白｜双方实际答应改约，原约与今天变化分别保留。她提前通知是真的，我有自己的决定也是真的，不因为女朋友就必须总能给同一个答案。
+  `,'y10_second_call',{flags:{y10SecondCallChangeNotified:true,y10SecondCallNoticeMinutes:150,y10SecondCallRebookAgreed:true,y10SecondCallRebookAt:'7-17 21:00'}});
+  add('y10_second_call','二十一点，新的时间真正接通','dorm','七月十七日 · 21:00–21:20',self,`
+旁白｜二十一点，电话按共同答应的新时间接通。她没有用更长的通话补偿我必须开心，我也没有把今天晚了三十分钟说成她不该去工作。
+叶澄 · 电话｜谢谢你直接答能不能给。我今天累，可能讲得慢一点，也想听你今天自己走到哪一页。
+沈知夏 · 电话｜想听，也可以慢。我的那一页今天终于交掉了，我们各说一点。
+旁白｜二十一点二十实际结束。这一通的认真来自通知、答复和真的到场，不是保证以后永远不会再有变化。
+  `,'y10_project_complete',{flags:{y10SecondCallKept:true,y10SecondCallKeptAt:'7-17 21:00-21:20'}});
+  add('y10_trial_review','有限试行，先核这一通做到了什么','dorm','七月十一日 · 18:00',self,`
+沈知夏 · 消息｜昨天十分钟真正说过，愿意继续这个能给的量。之后想加新的时段再问，不把十七号填成你已答应。
+叶澄 · 消息｜我也愿意继续。工作还有三周多，能确定时间再分别问，已经女朋友或新约会的范围各自保留。
+旁白｜我们实际回看这一通。有限试行没有因为一晚顺利就升级成排他的恋人，未约第二通也没有虚构改约、爽约或取消。
+  `,'y10_project_complete',{flags:{y10TrialReviewKept:true}});
+  add('y10_july_alone','同一个七月，也能分别过自己的日子','dorm','七月十日 · 下班后',self,`
+旁白｜十号下班以后，我自己买饭，核明天的通读。叶澄的新项目按她自己接受的安排继续，工作群有需要时收到，不变成私人必须回复。
+旁白｜三十号已约后撤回的电话不再接通，原来未约者也没有一通被拿来测试是否还喜欢的电话。难过仍会出现，不要求自己和电话一样立刻关干净。
+旁白｜陆遥发来真的住上新屋以后的灯，说照得见书桌，也发现晚饭店还没选好。我听朋友的新问题，没有为了让自己的夏天圆满就替她写全部适应。
+  `,'y10_project_complete',{flags:{y10PrivateCallsNotResumed:true}});
+  add('y10_project_complete','八月四日，四周真的做完','old_street','八月四日 · 工作消息',self,`
+叶澄 · 工作消息｜四周项目今天完成，片段交接按合同核清。七月八日至八月四日的实际工作结束，后续付款按约定日期，不在这条消息写已经结清。
+旁白｜我收到本人完成消息，才记这四周真正做完。交通、休息和素材交接都有她自己负责的日期，没有因为我怎样选择私人关系就取消或提前结束。
+旁白｜自己的初级编辑岗位已经开始一个多月，仍有需要学的东西。归雨书屋的钥匙交过，陆遥真正出发过，朋友们也各过新的日子，不一直站在原址等谁拿到完美结局。
+  `,'y10_autumn_gate',{flags:{y10ProjectCompleted:true,y10ProjectCompletedAt:'8-04',y10ProjectActualWeeks:4}});
+  gate('y10_autumn_gate','y10Outcome',{he:'y10_he_autumn',ne:'y10_ne_autumn',farewell:'y10_farewell_autumn'});
+  add('y10_he_autumn','秋日尾声 · 没有镜头的约会','autumn_riverside','九月二十日 · 18:00',ye,`
+旁白｜九月二十日，提前共同答应的下班时段，我们在河边见到。叶澄空着手，相机留在住处，四周项目已完成，我也带着自己的下班生活来。
+叶澄｜想见你，不是因为这里光正好。
+沈知夏｜我也想见。今天午饭买对了，说明还是改了第三遍。
+旁白｜她笑起来，讲自己做完项目后给那只杯子画过一张新的线稿，又决定允许它继续歪。我们不赶着拍共同照片，先问饿不饿、想沿河走多久。
+叶澄｜今天愿意牵手吗？不拍，走二十分钟，之后去吃饭。
+沈知夏｜愿意，你也愿意吗？
+旁白｜她答愿意，我们才牵起手。她握得太紧时我直接说，她松一点，也说今天自己掌心有点凉。
+旁白｜七月的两通联系与真正改约都在生活里做过，后来仍有普通的忙和变化。喜欢不是保存到文件夹就永远清楚，下一次仍需要听各自今天想怎样过。
+旁白｜陆遥的灯照到新桌面，林姨去见过一位老朋友，林晚、见微和周栀各有新的工作。没有人一直留在告别展里，才算那间店曾经有光。
+旁白｜我们向晚饭的街口走，不找一个镜头来证明今晚值得记住。这是一场已经真实到场的约会，之后想记录也还可以先问；今天，先一起生活。
+  `,'ye_ten_complete',{flags:{y10AutumnKept:true,y10AutumnTouchAgreed:true,y10AutumnHeldHands:true,y10AutumnPhotoRecorded:false}});
+  add('y10_ne_autumn','秋日尾声 · 下一帧见','autumn_riverside','九月二十三日 · 17:30',ye,`
+旁白｜九月二十三日，我们按新问过的下班时段到河边。四周项目已完成，自己的工作也有了第一轮真实节奏；今天只给二十分钟，不因为秋天到了就默认全部晚上归对方。
+叶澄｜我有时还会想先把话讲得很漂亮才发。现在发现先说不知道，也能听见你自己的声音。
+沈知夏｜我也还会怕提需要太麻烦。现在能问你有空吗，也留着你自己答的时间。
+旁白｜原女朋友试行者保留女朋友称呼，原约会继续与新开始的两个人仍在试着约会，不在秋日自动升级恋人。原先仅愿意再谈的时间，也没有被改写成早就恋爱。
+叶澄｜下次想去看看那只杯子的线稿，你有空吗？不是问你愿不愿意被拍。
+沈知夏｜想看。回去核过时间再答，不用现在为了结尾很好看就说全部都可以。
+旁白｜她说好，我们讲朋友们各自的新街与午饭，没有新的身体接触或拍摄。今天真实见过，再给下一次留一个各自愿意答的位置。
+旁白｜下一帧见，不是没答完的喜欢。是画面停下来以后，也愿意回到生活里，听对方接下来怎样说。
+  `,'ye_ten_complete',{flags:{y10AutumnKept:true,y10AutumnTouchAgreed:false,y10AutumnHeldHands:false,y10AutumnPhotoRecorded:false}});
+  add('y10_farewell_autumn','秋日尾声 · 画面之外','autumn_riverside','九月三十日 · 下班傍晚',self,`
+旁白｜九月三十日，我独自沿河走了一段。叶澄八月四日已完成四周项目，工作群的必要更新没有变成私人重新开始的暗号。
+旁白｜有时仍记得她怎样在黑画面前停一下，或某一晚真正问能不能靠近。曾喜欢过、真正谈过或可能有过的一夜都真实，不继续也不需要将过去剪成从未发生。
+旁白｜我开始自己的编辑工作，也有买错午饭和不想马上回答的下午。陆遥讲新屋灯下读过的第一本书，林姨终于认真休息过一阵，朋友们不是为了我都停在旧柜台。
+旁白｜原址的钥匙交过，活动真的完成，送站也按原车次发生。叶澄本人做过的错与后来实际处理保留，不将私人告别变成替别人已经原谅的判决。
+旁白｜我给自己买晚饭，回去继续明天那份通读。以后想靠近一个人，愿意说自己的感受，也愿意听对方不想展开的部分，不先找一份能证明所有真心的影像。
+旁白｜走到街口，我没有回头等一个不再约过的身影。雨停以后，画面之外也仍有属于自己的下一天。
+  `,'ye_ten_complete',{flags:{y10AutumnKept:true,y10AutumnTouchAgreed:false,y10AutumnHeldHands:false,y10AutumnPhotoRecorded:false}});
+  for (const s of scenes) if (s.cast.includes('ye_cheng') && s.id !== 'y10_public_environment') s.spriteVariants = {ye_cheng:'no_camera'};
+  const data = {chapterId:'ye10',scenes,gates};
+  if (typeof module !== 'undefined' && module.exports) module.exports = data;
+  else root.RainChapterTenYe = data;
+})(typeof window !== 'undefined' ? window : globalThis);

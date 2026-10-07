@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-06",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: stylized-concept. Asset type: wide 16:9 visual novel game background. Input image role: STYLE REFERENCE ONLY, the existing painterly rehearsal room; generate a different domestic apartment, not a rehearsal room edit. A modest lived-in rented apartment living room of a 23-year-old independent woman musician in a Chinese university town, early summer late evening: a small worn fabric sofa with a folded cotton blanket, low wooden table with two plain ceramic water cups, an acoustic guitar safely resting on a stand at the wall and a closed guitar case, small shelves with blank-spined books and ordinary records, a tidy tiny kitchenette glimpsed at the edge, a compact desk with closed laptop and sheets with indistinct nonreadable marks, a warm floor reading lamp, houseplants, a narrow window overlooking quiet neighborhood lights after rain. Comfortable everyday home after work, modest, personal, not luxury and not a concert stage. Spacious quiet central area for two character sprites, lower quarter uncluttered for dialogue overlay. Detailed painterly anime scenery matching the reference's wood texture, soft brushwork, cinematic depth and subdued teal, amber and muted brown palette. Warm lamplight, cool blue night at the window. No people, silhouettes, reflections of people, readable text, logos, UI, watermarks or nudity. Full opaque background.",
+  "reference": "E:/game/assets/backgrounds/chapter-two/rehearsal.png",
+  "referenceRole": "style only",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-e9207a7f-55c5-416d-8fd5-db17063b5536.png",
+  "output": "E:/game/assets/backgrounds/chapter-ten-zhou/zhou_home.png"
+}

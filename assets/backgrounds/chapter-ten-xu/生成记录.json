@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-06",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "prompt": "Use case: stylized-concept. Asset type: wide 16:9 visual novel game background. Input image role: STYLE REFERENCE ONLY, the existing painterly designer studio; create a different room, not an edit of the studio. A modest lived-in apartment living room belonging to a 26-year-old woman book designer, early summer evening: small linen sofa with folded throw, low wooden table with two plain tea cups, shelves with books and blank-spined design volumes, a few plants, a reading lamp, a narrow glimpse of ordinary kitchenette and entry hallway. Spacious quiet central area for two character sprites, lower quarter uncluttered for dialogue overlay. Detailed painterly anime scenery matching the reference's wood texture, soft brushwork and cinematic natural depth. Warm lamplight, cool dusk through a small window, intimate comfortable ordinary home after work; no luxury staging. No people, reflections of people, silhouettes, readable text, logos, screens showing text, UI, watermarks or nudity. Full opaque background.",
+  "reference": "E:/game/assets/backgrounds/chapter-two/studio.png",
+  "referenceRole": "style only",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-5188d0e7-e07d-4452-a124-88ee1f848516.png",
+  "output": "E:/game/assets/backgrounds/chapter-ten-xu/xu_home.png"
+}

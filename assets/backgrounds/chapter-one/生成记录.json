@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen",
+  "references": [
+    "E:/game/assets/cover.png"
+  ],
+  "items": [
+    {
+      "id": "bookshop",
+      "prompt": "Use case: illustration-story. Asset type: 16:9 landscape background for a contemporary Chinese yuri visual novel, Before the Rain Stops. Input image 1 is a style and mood reference only, not a layout to copy. Create a refined Japanese anime hand-painted watercolor background with delicate architectural linework, atmospheric depth, muted petrol teal, warm ivory, dusty sage and warm honey accents. Production-quality visual novel environment. Wide landscape 16:9 framing, eye-level view, open foreground space for character standing sprites and lower dialogue panel. No people, no character silhouettes, no readable text, no logos, no watermarks, no UI. Scene: Interior of a small old bookshop in a Chinese university town at rainy June dusk. Floor-to-ceiling warm wooden bookshelves, a large rain-streaked window on the left, two wooden chairs and a small reading table near window, modest checkout counter on far right, many lovingly used books, small warm lamps, a pot of hydrangeas. Cozy intimate bookshop of ten years rather than luxury cafe. Floor and central foreground clear. Rainy blue street visible outside with subtle warm lamps. Quiet welcoming atmosphere, detailed lived-in textures. No hanging signage with text."
+    },
+    {
+      "id": "old_street",
+      "prompt": "Use case: illustration-story. Asset type: 16:9 landscape background for a contemporary Chinese yuri visual novel, Before the Rain Stops. Input image 1 is a style and mood reference only, not a layout to copy. Create a refined Japanese anime hand-painted watercolor background with delicate architectural linework, atmospheric depth, muted petrol teal, warm ivory, dusty sage and warm honey accents. Production-quality visual novel environment. Wide landscape 16:9 framing, eye-level view, open foreground space for character standing sprites and lower dialogue panel. No people, no character silhouettes, no readable text, no logos, no watermarks, no UI. Scene: A narrow old side street beside a Chinese university campus, just after rain at blue-hour dusk in June. Low-rise Chinese brick and plaster shopfronts, old green awnings, potted plants, bicycles carefully parked near a wall, puddles reflecting warm store lamps, overhead utility wires, a bus stop in the far distance. A closed bookshop front window along one side, generic blank signs without writing. Quiet, nostalgic, grounded Chinese university neighborhood, not European castles or Japanese torii. Clear open sidewalk in foreground for character sprites, elegant rainy reflections, intimate rather than dramatic."
+    },
+    {
+      "id": "dorm",
+      "prompt": "Use case: illustration-story. Asset type: 16:9 landscape background for a contemporary Chinese yuri visual novel, Before the Rain Stops. Input image 1 is a style and mood reference only, not a layout to copy. Create a refined Japanese anime hand-painted watercolor background with delicate architectural linework, atmospheric depth, muted petrol teal, warm ivory, dusty sage and warm honey accents. Production-quality visual novel environment. Wide landscape 16:9 framing, eye-level view, open foreground space for character standing sprites and lower dialogue panel. No people, no character silhouettes, no readable text, no logos, no watermarks, no UI. Scene: A lived-in Chinese university women's shared dormitory at evening just before graduation. No occupants. Four ordinary study desks beneath loft beds, warm desk lamp switched on, soft blue rainy window light, one desk partly cleared, two open cardboard moving boxes and a folded canvas tote bag near wall, book stacks and a blank calendar, simple pale curtains. A small shared central space clear in foreground for sprites. Comfortable everyday student room, bittersweet departure atmosphere, no luxury apartment styling, no visible text or posters with readable letters."
+    }
+  ]
+}

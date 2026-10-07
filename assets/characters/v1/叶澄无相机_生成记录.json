@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-06",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in edit",
+  "prompt": "Use case: precise-object-edit / identity-preserve. Asset type: alternate transparent PNG character sprite for an existing Chinese visual novel. Input image: EDIT TARGET, the existing Ye Cheng sprite. Edit this exact adult 23-year-old woman into her no-camera everyday dating variant. Preserve her exact face, short warm dark-brown bob, gold hair clip, hazel eyes, relaxed small smile, adult proportions, white loose open rolled-sleeve shirt over gray tank top, olive green cargo trousers, belt, brown lace-up shoes, painterly anime rendering, warm muted palette and full-body centered framing with hair and both feet visible. Remove only the handheld video camera AND camera bag with its shoulder strap. Reconstruct the shirt and waist naturally where those items were. Change hands only as needed: natural relaxed empty hands at her sides or one hand loosely holding the opposite wrist near her waist, anatomically correct fingers, no new prop. No camera, phone, bag, backpack, microphone, guitar, plant or other object. Retain identity, outfit and head/body stance as closely as possible. Output a clean character cutout with genuinely transparent alpha background, no black/brown gradient halo, no solid backdrop, no checkerboard painted into the artwork, no shadows on a background, no text, logos, watermark or UI. Portrait same 2:3 full-body sprite composition as target, avoid cropping head or shoes.",
+  "reference": "E:/game/assets/characters/v1/ye_cheng.png",
+  "referenceRole": "edit target",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-043f9d36-e33f-4e77-a52f-a09fdeefbec5.png",
+  "output": "E:/game/assets/characters/v1/ye_cheng_no_camera.png",
+  "transparentBackground": true
+}

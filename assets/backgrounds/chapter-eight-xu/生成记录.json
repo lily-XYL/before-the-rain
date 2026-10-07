@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-06",
+  "mode": "built-in",
+  "tool": "image_gen.imagegen",
+  "useCase": "lighting-weather",
+  "prompt": "Use case: lighting-weather. Asset type: wide 16:9 painterly visual-novel background. Input image: EDIT TARGET, the existing designer studio. Change only time of day to a quiet summer evening around 19:00–20:00: deep navy twilight through the left windows, dim distant town lights, warm desk lamp and pendant illumination with softer pools of amber light across wooden desks and floor. Preserve camera, room architecture, left windows, central wooden work table, chairs, right shelves, plants, papers, materials and established detailed painterly anime game background style. Monitor stays dark; no readable text on papers or screens. Empty room after work, intimate calm and a little tired, comfortable natural lighting. Reserve unobtrusive central/lower area for character sprites and dialogue overlay. No people, silhouettes, logos, UI, lettering or watermarks. Full opaque background, wide landscape.",
+  "reference": "E:/game/assets/backgrounds/chapter-two/studio.png",
+  "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-6859ba1b-2b87-4a08-990d-8dea89385fd0.png",
+  "output": "E:/game/assets/backgrounds/chapter-eight-xu/studio_night.png"
+}

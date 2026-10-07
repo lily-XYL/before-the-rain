@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-06",
+  "historicalContexts": 24,
+  "combinations": 384,
+  "checks": [
+    "allPathsCoverageFrozenFactsAndSingleFinal",
+    "legacySavesAnd74Cards",
+    "actualTimingBeforeAndAfterScene",
+    "bookmarksRewindAndUntrustedFlags",
+    "graphAssetsAndNoRoleHints",
+    "letterOriginsSealingAndIndependentLife"
+  ],
+  "paths": 9216,
+  "visibleNodes": 362,
+  "scenes": 85,
+  "gates": 14
+}

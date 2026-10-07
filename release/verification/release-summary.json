@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-06T16:24:16.678Z",
+  "version": "1.0.0",
+  "tests": 140,
+  "pass": 140,
+  "fail": 0,
+  "skipped": 0,
+  "testFiles": 24,
+  "regressionSeconds": 1260.365,
+  "backupSeconds": 0.592,
+  "correctedRegressions": 5,
+  "recheckSeconds": 13.942,
+  "content": {
+    "date": "2026-10-06T16:13:40.395Z",
+    "sources": [
+      {
+        "file": "chapter-one.js",
+        "scenes": 30,
+        "gates": 0,
+        "textCharacters": 6811
+      },
+      {
+        "file": "chapter-two.js",
+        "scenes": 49,
+        "gates": 8,
+        "textCharacters": 12871
+      },
+      {
+        "file": "chapter-three.js",
+        "scenes": 53,
+        "gates": 4,
+        "textCharacters": 14071
+      },
+      {
+        "file": "chapter-four.js",
+        "scenes": 74,
+        "gates": 11,
+        "textCharacters": 18183
+      },
+      {
+        "file": "chapter-five.js",
+        "scenes": 98,
+        "gates": 20,
+        "textCharacters": 18337
+      },
+      {
+        "file": "chapter-six.js",
+        "scenes": 91,
+        "gates": 31,
+        "textCharacters": 20862
+      },
+      {
+        "file": "chapter-seven-lin.js",
+        "scenes": 52,
+        "gates": 10,
+        "textCharacters": 10460
+      },
+      {
+        "file": "chapter-eight-lin.js",
+        "scenes": 58,
+        "gates": 14,
+        "textCharacters": 10241
+      },
+      {
+        "file": "chapter-nine-lin.js",
+        "scenes": 58,
+        "gates": 8,
+        "textCharacters": 11018
+      },
+      {
+        "file": "chapter-ten-lin.js",
+        "scenes": 61,
+        "gates": 9,
+        "textCharacters": 12192
+      },
+      {
+        "file": "chapter-seven-xu.js",
+        "scenes": 71,
+        "gates": 10,
+        "textCharacters": 12417
+      },
+      {
+        "file": "chapter-eight-xu.js",
+        "scenes": 74,
+        "gates": 15,
+        "textCharacters": 11247
+      },
+      {
+        "file": "chapter-nine-xu.js",
+        "scenes": 70,
+        "gates": 14,
+        "textCharacters": 11821
+      },
+      {
+        "file": "chapter-ten-xu.js",
+        "scenes": 78,
+        "gates": 20,
+        "textCharacters": 11609
+      },
+      {
+        "file": "chapter-seven-zhou.js",
+        "scenes": 73,
+        "gates": 9,
+        "textCharacters": 12353
+      },
+      {
+        "file": "chapter-eight-zhou.js",
+        "scenes": 79,
+        "gates": 20,
+        "textCharacters": 12179
+      },
+      {
+        "file": "chapter-nine-zhou.js",
+        "scenes": 60,
+        "gates": 11,
+        "textCharacters": 9880
+      },
+      {
+        "file": "chapter-ten-zhou.js",
+        "scenes": 88,
+        "gates": 24,
+        "textCharacters": 13952
+      },
+      {
+        "file": "chapter-seven-ye.js",
+        "scenes": 76,
+        "gates": 15,
+        "textCharacters": 12913
+      },
+      {
+        "file": "chapter-eight-ye.js",
+        "scenes": 101,
+        "gates": 16,
+        "textCharacters": 15497
+      },
+      {
+        "file": "chapter-nine-ye.js",
+        "scenes": 63,
+        "gates": 11,
+        "textCharacters": 9822
+      },
+      {
+        "file": "chapter-ten-ye.js",
+        "scenes": 83,
+        "gates": 24,
+        "textCharacters": 13742
+      },
+      {
+        "file": "chapter-self-epilogue.js",
+        "scenes": 85,
+        "gates": 14,
+        "textCharacters": 15020
+      }
+    ],
+    "chapters": 23,
+    "scenes": 1625,
+    "choiceScenes": 225,
+    "textCharacters": 297498,
+    "nodes": 8044,
+    "unreachable": [],
+    "cards": 74,
+    "finalEndings": 13,
+    "backgrounds": 23,
+    "cast": 8,
+    "assets": 33,
+    "otherSpeakers": {
+      "？？？": 1,
+      "老读者": 18,
+      "出版社": 1,
+      "印厂": 1,
+      "朋友": 1
+    },
+    "checks": [
+      "uniqueScenes",
+      "knownCastIds",
+      "noPlaceholderDialogue",
+      "allEdgesAndChaptersReachable",
+      "allRuntimeAssetsExist",
+      "noExternalRuntimeDependencies",
+      "stableSaveIdentity",
+      "13Finals74Cards",
+      "noRoleSmallText",
+      "communityCoordinatorName"
+    ]
+  },
+  "sourceBrowser": {
+    "date": "2026-10-06T16:03:21.678Z",
+    "root": "E:\\game",
+    "checks": [
+      "all13CanonicalFinalsAndCorrectEndingNotes",
+      "13FinalsCollectedAnd74Cards",
+      "backupDownloadContainsProgressAnd13Finals",
+      "invalidBackupCannotAlterAnyStorage",
+      "backupSettingsUsableInFourViewports",
+      "realDownloadedBackupImportedIntoFreshContextAndResumed"
+    ],
+    "assets": {
+      "count": 33,
+      "failed": []
+    },
+    "errors": [],
+    "screenshots": [
+      "release-final-self.png",
+      "release-settings-1440.png",
+      "release-settings-390.png",
+      "release-settings-320.png",
+      "release-settings-844.png",
+      "release-title-mobile.png"
+    ]
+  },
+  "packageBrowser": {
+    "date": "2026-10-06T16:22:24.158Z",
+    "root": "E:\\game\\release\\雨停之前_v1.0.0",
+    "checks": [
+      "all13CanonicalFinalsAndCorrectEndingNotes",
+      "13FinalsCollectedAnd74Cards",
+      "backupDownloadContainsProgressAnd13Finals",
+      "invalidBackupCannotAlterAnyStorage",
+      "backupSettingsUsableInFourViewports",
+      "realDownloadedBackupImportedIntoFreshContextAndResumed"
+    ],
+    "assets": {
+      "count": 33,
+      "failed": []
+    },
+    "errors": [],
+    "screenshots": [
+      "release-final-self.png",
+      "release-settings-1440.png",
+      "release-settings-390.png",
+      "release-settings-320.png",
+      "release-settings-844.png",
+      "release-title-mobile.png"
+    ]
+  },
+  "package": "release/雨停之前_v1.0.0",
+  "archive": "release/雨停之前_v1.0.0.zip",
+  "archiveVerification": {
+    "date": "2026-10-06T16:23:15.8184627Z",
+    "archive": "E:\\game\\release\\雨停之前_v1.0.0.zip",
+    "entries": 67,
+    "bytes": 76673912,
+    "sha256": "a5101c55f296e792f7dc835b6ea8e43e68d0314c70d7b1a6b8ff7db709ba5a52",
+    "verified": true
+  }
+}

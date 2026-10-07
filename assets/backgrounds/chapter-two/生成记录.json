@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "E:/game/assets/backgrounds/chapter-one/bookshop.png",
+  "items": [
+    {
+      "id": "studio",
+      "prompt": "Use case: illustration-story. Asset type: wide 16:9 landscape game background for the existing Chinese visual novel Before the Rain Stops. Reference image is solely for matching painterly atmosphere, palette and rendering, not subject or layout. Detailed hand-painted anime environment, gentle architectural linework, muted petrol teal, ivory, sage, wood and honey light. Contemporary Chinese university town in June. Eye-level view, open central foreground for two standing character sprites, lower area suitable for dialogue overlay. No people, no silhouettes, no readable text, no logos, no watermark, no UI. Scene: modest independent book designer's second-floor studio, afternoon after rain. Large wooden working table with four cream paper sample swatches, folded book dummies, pencil, ruler, proof sheets with abstract unreadable marks. Side shelves hold sample books, paper stock and files. Computer on far side of table, screen dark. Two simple chairs, a small glass of water and a desk lamp. Diffused daylight through a tall side window, potted greenery, lived-in work surfaces. Quiet intimate practical workspace, not luxury office. Clear floor in central foreground.",
+      "file": "studio.png"
+    },
+    {
+      "id": "rehearsal",
+      "prompt": "Use case: illustration-story. Asset type: wide 16:9 landscape game background for the existing Chinese visual novel Before the Rain Stops. Reference image is solely for matching painterly atmosphere, palette and rendering, not subject or layout. Detailed hand-painted anime environment, gentle architectural linework, muted petrol teal, ivory, sage, wood and honey light. Contemporary Chinese university town in June. Eye-level view, open central foreground for two standing character sprites, lower area suitable for dialogue overlay. No people, no silhouettes, no readable text, no logos, no watermark, no UI. Scene: small rented rehearsal room on a university neighborhood upper floor, afternoon. Modest acoustic panels and pale worn plaster walls, a wooden acoustic guitar leaning securely on a stand at right, a small amplifier and coiled cable near wall, a microphone stand at side, two simple mismatched chairs, one stool, a low stand with a handwritten lyric sheet with no readable words. Soft June daylight from a narrow high window, faint amber lamp, sage teal accents, a small taped X on the clear wooden floor. Intimate musician's everyday room, not a grand stage, no dramatic concert lights.",
+      "file": "rehearsal.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "image_gen.imagegen",
+  "assets": [
+    {
+      "key": "rain_bookshop",
+      "prompt": "Use case: illustration-story / lighting-weather edit. Edit the attached background of Guiyu bookshop for a stormy evening scene in the same adult romance visual novel. Preserve the room architecture exactly: big window at left, wall of books, wooden floor, table and chairs, plants, counter at right, same camera and fine painterly anime style. Deep blue evening with heavier rain outside, muted amber lamps inside. A small old window seam is leaking; one bucket and a folded towel beneath it, a few damp proof sheets resting separately on a wooden side table, several cardboard boxes of books now on the dry right counter. Small localized puddle at left, most floor dry and walkable. Central foreground and lower quarter relatively clear for standing sprites and dialogue. A lived-in bookshop being tidied after a leak, not a disaster scene. No people, no readable text, no logos, no watermark, no UI. Wide 16:9 landscape.",
+      "output": "rain_bookshop.png",
+      "reference": "assets/backgrounds/chapter-one/bookshop.png",
+      "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-b9db66b3-5b20-4f48-8fce-0b972390de5d.png"
+    },
+    {
+      "key": "rain_stop",
+      "prompt": "Use case: illustration-story. New wide 16:9 background for adult romance visual novel 雨停之前. Attached bookshop is only a style and palette reference, not an edit target. An ordinary sheltered city BUS STOP on a quiet university back street in fictional Chinese Linjiang city, after the strongest evening rain has passed. Eye-level view from beneath shelter facing obliquely down sidewalk. Petrol teal night, amber shop lamps reflected on wet asphalt, faint mist and gentle raindrops, a dark green metal shelter frame and bench toward the side, unreadable blank timetable panel, a closed umbrella leaning beside the bench, warm bookshop storefront in distance with no readable signs, a distant bus approaching with soft headlights. Safe dry covered waiting area occupies central foreground for two character sprites, simple lower quarter for dialogue overlay. No railway tracks, no trains, no giant crowds, no people, no flooding, no readable text, no logos, no watermark, no UI. Refined hand painted anime environmental illustration matching attached reference linework and warm-cool balance; intimate everyday atmosphere.",
+      "output": "rain_stop.png",
+      "reference": "assets/backgrounds/chapter-one/bookshop.png",
+      "original": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-fd47509c-d663-4dd4-9b3c-98433a04c082.png"
+    }
+  ]
+}

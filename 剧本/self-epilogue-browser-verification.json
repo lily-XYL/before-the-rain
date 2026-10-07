@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-06",
+  "checks": [
+    "legacySelfContinuation",
+    "manualBookmarkRestore",
+    "actualFriendTalkWorkBoxesEventDepartureClosureMovingJobCallTiming",
+    "ownerAndChenSpritesExistAndRender",
+    "pressureWithdrawalKeepsOccurrenceAndUnfinishedOldMatters",
+    "twoLettersOneIndependentFinalOnlyAfterCompleteAutumn",
+    "74CardsAnd13Finals"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "documentHeight": 900,
+      "choiceBottom": 610,
+      "dialogueTop": 666,
+      "buttons": 4,
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "documentHeight": 844,
+      "choiceBottom": 534.265625,
+      "dialogueTop": 576,
+      "buttons": 4,
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    },
+    {
+      "width": 320,
+      "height": 668,
+      "documentWidth": 320,
+      "documentHeight": 859,
+      "choiceBottom": 526.1875,
+      "dialogueTop": 562.1875,
+      "buttons": 4,
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "documentHeight": 772,
+      "choiceBottom": 502,
+      "dialogueTop": 538,
+      "buttons": 4,
+      "roleSmallText": false,
+      "lastChoiceAccessibleByScroll": true
+    }
+  ],
+  "assets": {
+    "count": 32,
+    "failed": []
+  },
+  "errors": [],
+  "screenshots": [
+    "self-epilogue-choices-1440.png",
+    "self-epilogue-choices-390.png",
+    "self-epilogue-choices-320.png",
+    "self-epilogue-choices-844.png",
+    "self-epilogue-s7_train.png",
+    "self-epilogue-s7_move.png",
+    "self-epilogue-s7_job_start.png",
+    "self-epilogue-pressure-withdraw.png",
+    "self-epilogue-letter-open.png",
+    "self-epilogue-ending-open.png",
+    "self-epilogue-letter-sealed.png",
+    "self-epilogue-ending-sealed.png",
+    "self-epilogue-gallery-mobile.png"
+  ]
+}

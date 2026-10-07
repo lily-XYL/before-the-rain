@@ -1,0 +1,25 @@
+{
+  "product": "雨停之前",
+  "version": "1.0.0",
+  "platform": "Windows x64",
+  "builtAt": "2026-10-07T05:58:19.769Z",
+  "file": "E:\\game\\release\\雨停之前_v1.0.0.exe",
+  "bytes": 176158619,
+  "sha256": "f1d5061fe904347d4e845ba91587ee69a9cfc2c4ba07a8adc7fe6b6afa07ad25",
+  "verification": "passed",
+  "frameless": true,
+  "chapters": 23,
+  "finalEndings": 13,
+  "cards": 74,
+  "runtimeFilesChecked": 68,
+  "images": 33,
+  "checks": [
+    "packagedFramelessWindowAndIsolatedRenderer",
+    "customMinimizeMaximizeRestoreAndFullscreenKeys",
+    "all33ImagesLoadOfflineAndControlsFitMinimumWindow",
+    "externalNetworkAndWrongProtocolHostDenied",
+    "all13CanonicalEndingsAnd74CollectionCards",
+    "backupFileImportAndSavePersistenceAfterCustomCloseAndRelaunch",
+    "actualSingleExeStartsFromAnotherDirectoryAndRestoresSameSave"
+  ]
+}

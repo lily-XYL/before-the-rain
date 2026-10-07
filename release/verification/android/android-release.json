@@ -1,0 +1,14 @@
+{
+  "product": "雨停之前",
+  "version": "1.0.0",
+  "platform": "Android 8.0+",
+  "file": "E:\\game\\release\\雨停之前_v1.0.0.apk",
+  "bytes": 76687444,
+  "sha256": "0b77897a93d16c0da572f1c7494978e759d15a5027c22b77a4fa107e88c16e1e",
+  "signed": true,
+  "verification": "passed",
+  "uiChecks": 13,
+  "assets": 66,
+  "nativeDeviceTested": false,
+  "completedAt": "2026-10-07T06:23:13.690Z"
+}

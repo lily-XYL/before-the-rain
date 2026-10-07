@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "E:/game/assets/backgrounds/chapter-one/bookshop.png",
+  "source": "C:/Users/xing/.codex/generated_images/01a0f4ee-4bf4-7d53-bbde-828ca1442e4a/exec-0bd1a4d2-8c60-4bc4-92d6-50be1b687dda.png",
+  "items": [
+    {
+      "id": "rooftop",
+      "file": "rooftop.png",
+      "prompt": "Create a new wide 16:9 background illustration for the Chinese visual novel 雨停之前. Use the attached bookshop image only as a reference for its soft detailed anime painterly art style, warm realistic architecture and muted green/ochre palette; create a completely different scene. Scene: an old university neighborhood rooftop terrace at 4pm in June after rain has cleared. Safe high solid parapet, two folding chairs angled toward each other, a small table with two paper cups, a few pots of leafy plants, a closed acoustic guitar case leaning safely beside a chair. Distant red-brick campus buildings, trees and a quiet summer sky. Golden afternoon light, clean dry terrace, intimate calm atmosphere suitable for a conversation. Eye-level wide composition, leave central foreground spacious for character sprites and lower quarter unobtrusive for dialogue overlay. No people, no readable text, no logos or watermarks. Match the polished hand-painted visual novel background style, not a photo."
+    }
+  ]
+}

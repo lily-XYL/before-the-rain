@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-06",
+  "chapter": "ye10",
+  "source": "chapter-ten-ye.js",
+  "scenes": 83,
+  "gates": 24,
+  "textCharacters": 13722,
+  "choices": 7,
+  "combinations": 288,
+  "contexts": 24,
+  "paths": 6912,
+  "allVisibleDialogueCovered": true,
+  "totalImplementedTextCharacters": 282438,
+  "totalChapters": 22,
+  "chapterMemories": 61,
+  "finalEndings": 12,
+  "collectionCards": 73,
+  "tests": {
+    "firstBatch": {
+      "command": "node --test --test-concurrency=2 tests/chapter-ten-ye.test.cjs tests/chapter-nine-ye.test.cjs tests/engine.test.cjs",
+      "tests": 18,
+      "pass": 16,
+      "fail": 2,
+      "duration_ms": 157953.6223,
+      "ninthChapterPassed": 6,
+      "enginePassed": 6,
+      "failureReason": "实际历史样本漏原约会状态，导致状态覆盖与逐节点取样失败；已修正样本生成并复核全部新章检查"
+    },
+    "correctedFinalChapter": {
+      "command": "node --test tests/chapter-ten-ye.test.cjs",
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 314143.3211
+    },
+    "finalUniqueChecks": 18,
+    "finalUniquePassed": 18,
+    "unresolvedFailures": 0,
+    "note": "新增十章6项、受影响九章6项、引擎6项最终通过。首次4项新章检查与复核重复，不另计。未在本次重新跑全部其他章节。"
+  },
+  "browserRecord": "ye-ten-browser-verification.json",
+  "browserPassed": true,
+  "browserChecks": 10,
+  "screenshots": 14,
+  "pageErrors": 0,
+  "assets": {
+    "backgrounds": 22,
+    "originalSprites": 8,
+    "variantSprites": 1,
+    "loaded": 31,
+    "failed": 0,
+    "newImages": 0
+  },
+  "remaining": "独身群像收束篇与第十三个最终结局待制作"
+}

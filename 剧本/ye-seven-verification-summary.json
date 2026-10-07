@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-06",
+  "chapter": "ye7",
+  "scenes": 76,
+  "gates": 15,
+  "characters": 12913,
+  "totalCharacters": 243397,
+  "combinations": 216,
+  "histories": 24,
+  "paths": 5184,
+  "fullRegression": {
+    "tests": 110,
+    "pass": 110,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 831936.6581
+  },
+  "browser": {
+    "mode": "headless Edge via Playwright",
+    "url": "file:///E:/game/index.html",
+    "assetCount": 29,
+    "backgrounds": 20,
+    "characters": 8,
+    "spriteVariants": 1,
+    "assetFailures": 0,
+    "pageErrors": [],
+    "galleryCards": 64,
+    "chapterMemories": 55,
+    "finals": 9,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "docWidth": 1440,
+        "choiceBottom": 540,
+        "dialogueTop": 666,
+        "choiceHeights": [
+          58,
+          58,
+          58
+        ],
+        "role": false,
+        "sprite": "assets/characters/v1/ye_cheng_no_camera.png"
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "docWidth": 390,
+        "choiceBottom": 505.265625,
+        "dialogueTop": 588,
+        "choiceHeights": [
+          74,
+          74,
+          55
+        ],
+        "role": false,
+        "sprite": "assets/characters/v1/ye_cheng_no_camera.png"
+      },
+      {
+        "width": 320,
+        "height": 668,
+        "docWidth": 320,
+        "choiceBottom": 497.1875,
+        "dialogueTop": 533.1875,
+        "choiceHeights": [
+          74,
+          74,
+          74
+        ],
+        "role": false,
+        "sprite": "assets/characters/v1/ye_cheng_no_camera.png"
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "docWidth": 844,
+        "choiceBottom": 432,
+        "dialogueTop": 468,
+        "choiceHeights": [
+          58,
+          58,
+          58
+        ],
+        "role": false,
+        "sprite": "assets/characters/v1/ye_cheng_no_camera.png"
+      }
+    ],
+    "screenshots": [
+      "ye-seven-choices-1440.png",
+      "ye-seven-choices-320.png",
+      "ye-seven-choices-390.png",
+      "ye-seven-choices-844.png",
+      "ye-seven-clip-desktop.png",
+      "ye-seven-distance-desktop.png",
+      "ye-seven-gallery-mobile.png",
+      "ye-seven-open-desktop.png",
+      "ye-seven-open-mobile.png",
+      "ye-seven-plant-desktop.png",
+      "ye-seven-repaired-desktop.png",
+      "ye-seven-slow-desktop.png",
+      "ye-seven-title-320.png",
+      "ye-seven-work-desktop.png"
+    ]
+  },
+  "imageGeneration": {
+    "tool": "image_gen.imagegen",
+    "output": "assets/characters/v1/ye_cheng_no_camera.png",
+    "record": "assets/characters/v1/叶澄无相机_生成记录.json",
+    "originalRetained": true,
+    "alphaRetained": true
+  },
+  "scope": "All chapter-seven choices under 24 real common-line histories; not all earlier historical Cartesian products."
+}
