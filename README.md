@@ -4,6 +4,14 @@
 
 ## 本地完整版 v1.0.0
 
+GitHub 下载：[v1.0.0 发行页面](https://github.com/lily-XYL/before-the-rain/releases/tag/v1.0.0)。仓库为私有，需登录有访问权限的账号。
+
+- [Windows 单文件 EXE](https://github.com/lily-XYL/before-the-rain/releases/download/v1.0.0/before-the-rain-v1.0.0-windows.exe)
+- [Android APK](https://github.com/lily-XYL/before-the-rain/releases/download/v1.0.0/before-the-rain-v1.0.0-android.apk)
+- [浏览器完整版 ZIP](https://github.com/lily-XYL/before-the-rain/releases/download/v1.0.0/before-the-rain-v1.0.0-web.zip)
+
+发行附件使用英文文件名；文件内容与以下本地中文版名称的安装包相同。`SHA256SUMS.txt` 中使用 GitHub 下载文件名。
+
 Android 手机版：`release/雨停之前_v1.0.0.apk`，支持 Android 8.0 及以上（需较新的系统 WebView），完整剧情和图片已内置。适配横竖屏、触摸操作、多选项滚动、刘海与系统导航区域；支持系统返回键和备份文件迁移。安装包已签名，并通过 8 种屏幕尺寸与实际 APK 内容校验；目前未在 Android 实机或模拟器安装测试。操作和构建说明见 [Android 手机版说明](android/README.md)。
 
 Windows 单文件桌面版：`release/雨停之前_v1.0.0.exe`，双击即可离线游玩，运行时与全部剧情、素材已内置。系统标题栏和原生边框已去除，右上角可以最小化、最大化／还原及关闭；拖动顶部空白处移动窗口，F11 切换全屏，Esc 退出全屏。
